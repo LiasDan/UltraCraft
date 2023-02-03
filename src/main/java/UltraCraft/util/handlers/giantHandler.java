@@ -29,12 +29,8 @@ public class giantHandler
 		boolean small = false;
 		final EntityLivingBase entity = event.player;
 		if(event.player.isPotionActive(PotionCore.BIG_POTION)) big = true;
-		if(event.player.isPotionActive(Potion.getPotionFromResourceLocation("supersentaicraft"+ ":" + "big"))) big = true;
-		if(event.player.isPotionActive(Potion.getPotionFromResourceLocation("kamenridercraft4th"+ ":" + "big"))) big = true;
 		
 		if(event.player.isPotionActive(PotionCore.SMALL_POTION)) small = true;
-		if(event.player.isPotionActive(Potion.getPotionFromResourceLocation("supersentaicraft"+ ":" + "small"))) small = true;
-		if(event.player.isPotionActive(Potion.getPotionFromResourceLocation("kamenridercraft4th"+ ":" + "small"))) small = true;
 		
 		if(big&!small){
 			
@@ -83,12 +79,8 @@ public class giantHandler
 		boolean small = false;
 	
 		if(entity.isPotionActive(PotionCore.BIG_POTION)) big = true;
-		if(entity.isPotionActive(Potion.getPotionFromResourceLocation("supersentaicraft"+ ":" + "big"))) big = true;
-		if(entity.isPotionActive(Potion.getPotionFromResourceLocation("kamenridercraft4th"+ ":" + "big"))) big = true;
 		
 		if(entity.isPotionActive(PotionCore.SMALL_POTION)) small = true;
-		if(entity.isPotionActive(Potion.getPotionFromResourceLocation("supersentaicraft"+ ":" + "small"))) small = true;
-		if(entity.isPotionActive(Potion.getPotionFromResourceLocation("kamenridercraft4th"+ ":" + "small"))) small = true;
 		
 		
 			if(big&!small)
