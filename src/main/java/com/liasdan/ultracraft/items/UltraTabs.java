@@ -40,7 +40,7 @@ public class UltraTabs {
     		CreativeModeTab.builder().icon(() -> new ItemStack(RangerBlocks.RYUSOULGER_ORE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.block")).build());
     
-    public static List<Item> GORANGER= new ArrayList<Item>();
+    public static List<Item> ULTRAMAN= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
