@@ -41,22 +41,6 @@ public class UltraTabs {
 					.title(Component.translatable("tab.supersentaicraft.block")).build());
     
     public static List<Item> GORANGER= new ArrayList<Item>();
-	public static List<Item> JAKQ= new ArrayList<Item>();
-	public static List<Item> BATTLE_FEVER= new ArrayList<Item>();
-	public static List<Item> SUN_VULCAN= new ArrayList<Item>();
-
-	public static List<Item> MASKMAN= new ArrayList<Item>();
-
-	public static List<Item> CARRANGER= new ArrayList<Item>();
-    public static List<Item> GINGAMAN= new ArrayList<Item>();
-
-	public static List<Item> GAORANGER= new ArrayList<Item>();
-    public static List<Item> SHINKENGER= new ArrayList<Item>();
-
-	public static List<Item> LUPATRANGER= new ArrayList<Item>();
-	public static List<Item> RYUSOULGER= new ArrayList<Item>();
-	public static List<Item> BOONBOOMGER= new ArrayList<Item>();
-	public static List<Item> GOZYUGER= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
