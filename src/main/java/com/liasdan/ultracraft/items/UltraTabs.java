@@ -28,7 +28,7 @@ public class UltraTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(Rider_Blocks.PURE_GAIA_MEMORY_BLOCK.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+"textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("Rider Blocks")).build());*/
 	
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> GorangerTab = CREATIVE_MODE_TABS.register("ssc001", () ->
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> UltramanTab = CREATIVE_MODE_TABS.register("umc001", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(UltramanItems.GORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_goranger_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.goranger")).build());
 
