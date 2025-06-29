@@ -1,0 +1,96 @@
+{
+  "effect.supersentaicraft.flying": "Flying",
+  "effect.supersentaicraft.fire_punch": "Fire Punch",
+  "effect.supersentaicraft.punch": "Punch",
+  "effect.supersentaicraft.big": "Giant",
+  "effect.supersentaicraft.slash": "Slash",
+  "effect.supersentaicraft.fire_slash": "Fire Slash",
+  "effect.supersentaicraft.fire_shot": "Fire Shot",
+  "effect.supersentaicraft.shot_boost": "Shot Boost",
+  "effect.supersentaicraft.sneakboost": "Sneak Boost",
+  "effect.supersentaicraft.waterboost": "Water Boost",
+  "effect.supersentaicraft.frost_walker": "Frost Walker",
+  "effect.supersentaicraft.smoke": "Smoke",
+
+  "effect.supersentaicraft.boost": "Boost",
+  "effect.supersentaicraft.anti_poison": "Anti Poison",
+  "effect.supersentaicraft.small": "Shrink",
+  "effect.supersentaicraft.explosion_punch": "Explosive Punch",
+  "effect.supersentaicraft.reflect": "Reflect",
+  "effect.supersentaicraft.explosion_shot": "Explosive Shot",
+  "effect.supersentaicraft.thunder_shot": "Thunder Shot",
+  "effect.supersentaicraft.thunder_punch": "Thunder Punch",
+  "effect.supersentaicraft.flat": "Flatten",
+  "effect.supersentaicraft.stretch": "Stretch",
+  "effect.supersentaicraft.wide": "Wide",
+
+  "entity.ultracraft.zetton": "Zetton",
+  "entity.ultracraft.yapool": "Yapool",
+  "entity.ultracraft.baltan": "Baltan",
+  "entity.ultracraft.alien_magma": "Alien Magma",
+  "entity.ultracraft.ultraman_shadow": "Ultraman Shadow",
+
+  //Ultraman
+  "tab.ultracraft.ultraman": "Ultraman",
+
+  "item.ultracraft.land_of_light_fragment": "Land of Light Fragment",
+  "block.ultracraft.meteor": "Meteor Block",
+
+  "item.ultracraft.ultraman_head": "Ultraman Helmet",
+  "item.ultracraft.ultraman_torso": "Ultraman Chestplate",
+  "item.ultracraft.ultraman_legs": "Ultraman Legs",
+
+  "item.ultracraft.beta_capsule": "Beta Capsule (Ultraman)",
+  "item.ultracraft.beta_capsule_zoffy": "Beta Capsule (Zoffy)",
+  "item.ultracraft.ultraman_energy": "Ultraman Energy",
+  "item.ultracraft.zoffy_energy": "Zoffy Energy",
+
+  "item.ultracraft.ultra_eye": "Ultra Eye (UltraSeven)",
+  "item.ultracraft.seven_energy": "UltraSeven Energy",
+
+  "item.ultracraft.color_timer_jack": "Color Timer (Ultraman Jack)",
+  "item.ultracraft.jack_energy": "Ultraman Jack Energy",
+
+  "item.ultracraft.ultra_rings": "Ultra Rings (Ultraman Ace)",
+  "item.ultracraft.color_timer_father": "Color Timer (Father of Ultra)",
+  "item.ultracraft.ace_energy": "Ultraman Ace Energy",
+  "item.ultracraft.father_energy": "Father of Ultra Energy",
+
+  "item.ultracraft.ultra_badge": "Ultra Badge (Ultraman Taro)",
+  "item.ultracraft.color_timer_mother": "Color Timer (Mother of Ultra)",
+  "item.ultracraft.taro_energy": "Ultraman Taro Energy",
+  "item.ultracraft.mother_energy": "Mother of Ultra Energy",
+
+  "item.ultracraft.leo_ring": "Leo Ring (Ultraman Leo)",
+  "item.ultracraft.color_timer_astra": "Color Timer (Astra)",
+  "item.ultracraft.king_buckle": "Ultraman King's Buckle",
+  "item.ultracraft.leo_energy": "Ultraman Leo Energy",
+  "item.ultracraft.astra_energy": "Astra Energy",
+  "item.ultracraft.king_energy": "Ultraman King Energy",
+
+  "item.ultracraft.beam_flasher": "Beam Flasher (Ultraman Joneus)",
+  "item.ultracraft.beam_flasher_elek": "Beam Flasher (Elek)",
+  "item.ultracraft.beam_flasher_loto": "Beam Flasher (Loto)",
+  "item.ultracraft.joneus_energy": "Ultraman Joneus Energy",
+  "item.ultracraft.elek_energy": "Elek Energy",
+  "item.ultracraft.loto_energy": "Loto Energy",
+
+  "item.ultracraft.bright_stick": "Bright Stick (Ultraman 80)",
+  "item.ultracraft.bright_bracelet": "Bright Bracelet (Yullian)",
+  "item.ultracraft.eighty_energy": "Ultraman 80 Energy",
+  "item.ultracraft.yullian_energy": "Yullian Energy",
+
+  "item.ultracraft.usa_riser": "USA Riser (Ultraman Scott)",
+  "item.ultracraft.usa_riser_chuck": "USA Riser (Ultraman Chuck)",
+  "item.ultracraft.beth_riser": "USA Riser (Ultrawoman Beth)",
+  "item.ultracraft.scott_energy": "Ultraman Scott Energy",
+  "item.ultracraft.chuck_energy": "Ultraman Chuck Energy",
+  "item.ultracraft.beth_energy": "Ultrawoman Beth Energy",
+
+  "item.ultracraft.delta_plasma": "Delta Plasma (Ultraman Great)",
+  "item.ultracraft.flash_prism": "Flash Prism (Ultraman Powered)",
+  "item.ultracraft.pikari_brush": "Pikari Brush (Ultraman Zearth)",
+  "item.ultracraft.great_energy": "Ultraman Great Energy",
+  "item.ultracraft.powered_energy": "Ultraman Powered Energy",
+  "item.ultracraft.zearth_energy": "Ultraman Zearth Energy"
+}
