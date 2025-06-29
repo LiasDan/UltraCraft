@@ -1,7 +1,7 @@
 package com.liasdan.ultracraft.items.others;
 
-import com.liasdan.supersentaicraft.items.GorangerItems;
-import com.liasdan.supersentaicraft.items.client.RangerArmorRenderer;
+import com.liasdan.ultracraft.items.OtherItems;
+import com.liasdan.ultracraft.items.client.UltraArmorRenderer;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.core.Holder;
 import net.minecraft.world.entity.Entity;
@@ -28,7 +28,7 @@ import java.util.function.Consumer;
 
 public class UltraArmorItem extends ArmorItem implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
+	private Item RepairItem = OtherItems.LAND_OF_LIGHT_FRAGMENT.get();
 	
 	public UltraArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
 		super(material, type, properties.stacksTo(1).durability(type ==Type.BOOTS?600:500));
@@ -38,11 +38,11 @@ public class UltraArmorItem extends ArmorItem implements GeoItem {
 	@Override
 	public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
 		consumer.accept(new GeoRenderProvider() {
-			private RangerArmorRenderer renderer;
+			private UltraArmorRenderer renderer;
 			
 			@Override
 			public <T extends LivingEntity> HumanoidModel<?> getGeoArmorRenderer(@Nullable T livingEntity, ItemStack itemStack, @Nullable EquipmentSlot equipmentSlot, @Nullable HumanoidModel<T> original) {
-				this.renderer = new RangerArmorRenderer(livingEntity, equipmentSlot);
+				this.renderer = new UltraArmorRenderer(livingEntity, equipmentSlot);
 
 				return this.renderer;
 			}

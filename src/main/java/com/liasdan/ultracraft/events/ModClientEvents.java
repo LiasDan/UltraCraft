@@ -1,6 +1,6 @@
 package com.liasdan.ultracraft.events;
 
-import com.liasdan.supersentaicraft.effect.EffectCore;
+import com.liasdan.ultracraft.effect.EffectCore;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RenderLivingEvent;
 

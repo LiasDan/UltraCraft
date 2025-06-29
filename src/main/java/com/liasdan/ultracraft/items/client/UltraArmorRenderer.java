@@ -1,12 +1,12 @@
 package com.liasdan.ultracraft.items.client;
 
-import com.liasdan.supersentaicraft.items.others.RangerArmorItem;
-import com.liasdan.supersentaicraft.items.others.RangerChangerItem;
+import com.liasdan.ultracraft.items.others.UltraArmorItem;
+import com.liasdan.ultracraft.items.others.UltraRiserItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class UltraArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
+public class UltraArmorRenderer extends GeoArmorRenderer<UltraArmorItem> {
 	 
 	private static LivingEntity RIDER;
 	
@@ -21,8 +21,8 @@ public class UltraArmorRenderer extends GeoArmorRenderer<RangerArmorItem> {
 	protected void applyBoneVisibilityBySlot(EquipmentSlot currentSlot) {
 		setAllVisible(false);
 
-		if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RangerChangerItem) {
-			RangerChangerItem BELT = ((RangerChangerItem)RIDER.getItemBySlot(EquipmentSlot.FEET).getItem()); 
+		if (RIDER.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof UltraRiserItem) {
+			UltraRiserItem BELT = ((UltraRiserItem)RIDER.getItemBySlot(EquipmentSlot.FEET).getItem());
 		
 				setBoneVisible(this.head, BELT.getPartsForSlot(currentSlot,"head"));
 				setBoneVisible(this.body,  BELT.getPartsForSlot(currentSlot,"body"));

@@ -1,6 +1,6 @@
 package com.liasdan.ultracraft.effect;
 
-import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.ultracraft.UltraCraftCore;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class EffectCore {
 
-	public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, SuperSentaiCraftCore.MODID);
+	public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, UltraCraftCore.MODID);
 
 
 	public static final Holder<MobEffect> BOOST = EFFECT.register("boost",
@@ -37,18 +37,18 @@ public class EffectCore {
 
 	public static final Holder<MobEffect> FLYING= EFFECT.register("flying",
 			() -> new 	BasicEffect(MobEffectCategory.BENEFICIAL, 0xffffff)
-					.addAttributeModifier(NeoForgeMod.CREATIVE_FLIGHT, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.flying"), 1, AttributeModifier.Operation.ADD_VALUE) );
+					.addAttributeModifier(NeoForgeMod.CREATIVE_FLIGHT, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.flying"), 1, AttributeModifier.Operation.ADD_VALUE) );
 
 	public static final Holder<MobEffect> FIRESLASH= EFFECT.register("fire_slash",
 			() -> new BasicEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
 
 	public static final Holder<MobEffect> SMALL= EFFECT.register("small",
 			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
-					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.small"), -0.1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.small"), -0.1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 	public static final Holder<MobEffect> BIG= EFFECT.register("big",
 			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0x1d8519)
-					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "effect.big"), 1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+					.addAttributeModifier(Attributes.SCALE, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.big"), 1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 	public static final Holder<MobEffect> SMOKE= EFFECT.register("smoke",
 			() -> new 	SmokeEffect(MobEffectCategory.BENEFICIAL, 0xf7fada));

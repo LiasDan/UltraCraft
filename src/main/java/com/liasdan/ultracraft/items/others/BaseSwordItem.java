@@ -1,13 +1,13 @@
 package com.liasdan.ultracraft.items.others;
 
-import com.liasdan.supersentaicraft.items.GorangerItems;
+import com.liasdan.ultracraft.items.OtherItems;
 import net.minecraft.world.item.*;
 
 import java.util.List;
 
 public class BaseSwordItem extends SwordItem {
 
-	private Item RepairItem = GorangerItems.GORANGER_LOGO.get();
+	private Item RepairItem = OtherItems.LAND_OF_LIGHT_FRAGMENT.get();
 
 	private Item craftingRemainingItem = null;
 	

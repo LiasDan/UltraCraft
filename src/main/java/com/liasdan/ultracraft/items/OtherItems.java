@@ -17,16 +17,11 @@ public class OtherItems {
 	public static final DeferredItem<Item> BASE_SWORD = ITEMS.register("base_sword",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
 
-	public static final DeferredItem<Item> BASE_MECHA_SWORD = ITEMS.register("base_mecha_sword",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
-
 	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","",""));
 
 	public static final DeferredItem<Item> LAND_OF_LIGHT_FRAGMENT = ITEMS.register("land_of_light_fragment",
-			() -> new UltraFormChangeItem(new Item.Properties(), 0, "", "", "",
-					new MobEffectInstance(EffectCore.BIG, 40, 2,true,false))
-					.ChangeSlot(2).addSwitchForm(BLANK_FORM.get()).AddToTabList(UltraTabs.MISC));
+			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

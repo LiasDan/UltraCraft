@@ -1,7 +1,7 @@
 package com.liasdan.ultracraft.blocks;
 
 import com.google.common.collect.Lists;
-import com.liasdan.supersentaicraft.entity.footsoldier.BaseFootsoldierEntity;
+import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;

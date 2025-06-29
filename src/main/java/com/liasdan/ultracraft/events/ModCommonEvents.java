@@ -1,10 +1,6 @@
 package com.liasdan.ultracraft.events;
 
 import com.liasdan.ultracraft.effect.EffectCore;
-import com.liasdan.ultracraft.entity.MobsCore;
-import com.liasdan.ultracraft.entity.boss.*;
-import com.liasdan.ultracraft.entity.footsoldier.*;
-import com.liasdan.ultracraft.items.OtherItems;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;

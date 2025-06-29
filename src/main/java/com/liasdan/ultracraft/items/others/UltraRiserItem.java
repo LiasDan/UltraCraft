@@ -1,7 +1,7 @@
 package com.liasdan.ultracraft.items.others;
 
 import com.google.common.collect.Lists;
-import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
+import com.liasdan.ultracraft.UltraCraftCore;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -155,17 +155,17 @@ public class UltraRiserItem extends UltraArmorItem {
 
 	public ResourceLocation getModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
-			return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel());
+			return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel());
 		}
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
 	}
 	
 	public ResourceLocation getBeltModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
 	}
 
 	public ResourceLocation getAnimationResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot) {
-		return ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID, "animations/ranger.animation.json");
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "animations/ultra.animation.json");
 	}
 
 	public static void reset_Form_Item(ItemStack  itemstack)
@@ -258,7 +258,7 @@ public class UltraRiserItem extends UltraArmorItem {
 	}
 
 	public UltraRiserItem CanChangeTexture() {
-		SuperSentaiCraftCore.CHANGE_CHANGER_TEXTURE.add(this);
+		UltraCraftCore.CHANGE_CHANGER_TEXTURE.add(this);
 		return this;
 	}
 

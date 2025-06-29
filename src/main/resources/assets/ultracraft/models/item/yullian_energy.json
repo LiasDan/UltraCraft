@@ -2,6 +2,6 @@
   "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "item/generated",
   "textures": {
-    "layer0": "ultracraft:items/yullian_energy"
+    "layer0": "ultracraft:item/yullian_energy"
   }
 }

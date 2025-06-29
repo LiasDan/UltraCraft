@@ -2,6 +2,6 @@
   "_comment": "Generated using MiningMark48's JSON Generator.",
   "parent": "block/cube_all",
   "textures": {
-    "all": "ultracraft:blocks/meteor"
+    "all": "ultracraft:block/meteor"
   }
 }

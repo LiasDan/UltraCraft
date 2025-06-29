@@ -1,8 +1,5 @@
 package com.liasdan.ultracraft.items;
 
-import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.blocks.RangerBlocks;
-import com.liasdan.supersentaicraft.entity.MobsCore;
 import com.liasdan.ultracraft.UltraCraftCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -29,18 +26,18 @@ public class UltraTabs {
 			.title(Component.literal("Rider Blocks")).build());*/
 	
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> UltramanTab = CREATIVE_MODE_TABS.register("umc001", () ->
-			CreativeModeTab.builder().icon(() -> new ItemStack(UltramanItems.GORANGER_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_goranger_items.png"))
-					.title(Component.translatable("tab.supersentaicraft.goranger")).build());
+			CreativeModeTab.builder().icon(() -> new ItemStack(UltramanItems.ULTRAMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
+					.title(Component.translatable("tab.ultracraft.ultraman_items")).build());
 
-	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("ssc900", () ->
-    		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.SUPER_SENTAI_LOGO.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("umc900", () ->
+    		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.LAND_OF_LIGHT_FRAGMENT.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
 					.title(Component.translatable("tab.supersentaicraft.misc")).build());
     
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
-    		CreativeModeTab.builder().icon(() -> new ItemStack(RangerBlocks.RYUSOULGER_ORE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
-					.title(Component.translatable("tab.supersentaicraft.block")).build());
-    
-    public static List<Item> GORANGER= new ArrayList<Item>();
+//    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
+//    		CreativeModeTab.builder().icon(() -> new ItemStack(RangerBlocks.RYUSOULGER_ORE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
+//					.title(Component.translatable("tab.supersentaicraft.block")).build());
+//
+    public static List<Item> ULTRAMAN= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
@@ -51,10 +48,10 @@ public class UltraTabs {
     
     public static void AddItemsToTabs(BuildCreativeModeTabContentsEvent event){
 
-		if(event.getTab() == UltraTabs.GorangerTab.get()) {
-			for (int i = 0; i < UltraTabs.GORANGER.size(); i++)
+		if(event.getTab() == UltraTabs.UltramanTab.get()) {
+			for (int i = 0; i < UltraTabs.ULTRAMAN.size(); i++)
 			{
-				event.accept( UltraTabs.GORANGER.get(i));
+				event.accept( UltraTabs.ULTRAMAN.get(i));
 			}
 
 		}
@@ -67,13 +64,13 @@ public class UltraTabs {
 				event.accept( UltraTabs.MISC.get(i));
 			}
 		}
-		else if(event.getTab() == UltraTabs.BlockTab.get()) {
-			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
-			{
-				event.accept( UltraTabs.BLOCKS.get(i));
-			}
-
-		}
+//		else if(event.getTab() == UltraTabs.BlockTab.get()) {
+//			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
+//			{
+//				event.accept( UltraTabs.BLOCKS.get(i));
+//			}
+//
+//		}
 
 
     	

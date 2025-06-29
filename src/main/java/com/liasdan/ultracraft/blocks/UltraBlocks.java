@@ -1,10 +1,8 @@
 package com.liasdan.ultracraft.blocks;
 
-import com.liasdan.supersentaicraft.SuperSentaiCraftCore;
-import com.liasdan.supersentaicraft.blocks.machine.BoonboomCarProgrammer;
-import com.liasdan.supersentaicraft.items.OtherItems;
-import com.liasdan.supersentaicraft.items.RangerTabs;
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.items.OtherItems;
+import com.liasdan.ultracraft.items.UltraTabs;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
