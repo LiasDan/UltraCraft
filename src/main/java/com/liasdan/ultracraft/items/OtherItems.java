@@ -14,8 +14,8 @@ public class OtherItems {
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UltraCraftCore.MODID);
 
-	public static final DeferredItem<Item> BASE_SWORD = ITEMS.register("base_sword",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
+//	public static final DeferredItem<Item> BASE_SWORD = ITEMS.register("base_sword",
+//			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
 
 	public static final DeferredItem<Item> BLANK_FORM = ITEMS.register("blank_form",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","",""));

@@ -1,6 +1,8 @@
 package com.liasdan.ultracraft.events;
 
 import com.liasdan.ultracraft.effect.EffectCore;
+import com.liasdan.ultracraft.entity.MobsCore;
+import com.liasdan.ultracraft.entity.footsoldier.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
@@ -99,11 +101,15 @@ public class ModCommonEvents {
 
 	@SubscribeEvent
 	public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-		//event.put(MobsCore.ZOLDERS.get(), ZoldersEntity.setAttributes().build());
+		event.put(MobsCore.ZETTON.get(), ZettonEntity.setAttributes().build());
+		event.put(MobsCore.YAPOOL.get(), YapoolEntity.setAttributes().build());
+		event.put(MobsCore.BALTAN.get(), BaltanEntity.setAttributes().build());
+		event.put(MobsCore.ALIEN_MAGMA.get(), AlienMagmaEntity.setAttributes().build());
+		event.put(MobsCore.SHADOW.get(), ShadowEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent
 	public static void entitySpawnRestriction(RegisterSpawnPlacementsEvent event) {
-		//event.register(MobsCore.ZOLDERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+//		event.register(MobsCore.ZOLDERS.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 }

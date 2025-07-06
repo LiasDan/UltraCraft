@@ -28,7 +28,13 @@
   "entity.ultracraft.yapool": "Yapool",
   "entity.ultracraft.baltan": "Baltan",
   "entity.ultracraft.alien_magma": "Alien Magma",
-  "entity.ultracraft.ultraman_shadow": "Ultraman Shadow",
+  "entity.ultracraft.shadow": "Ultraman Shadow",
+
+  "item.ultracraft.zetton_spawn_egg": "Zetton Spawn Egg",
+  "item.ultracraft.yapool_spawn_egg": "Yapool Spawn Egg",
+  "item.ultracraft.baltan_spawn_egg": "Baltan Spawn Egg",
+  "item.ultracraft.alien_magma_spawn_egg": "Alien Magma Spawn Egg",
+  "item.ultracraft.shadow_spawn_egg": "Ultraman Shadow Spawn Egg",
 
   //Ultraman
   "tab.ultracraft.ultraman": "Ultraman",
@@ -45,8 +51,13 @@
   "item.ultracraft.ultraman_energy": "Ultraman Energy",
   "item.ultracraft.zoffy_energy": "Zoffy Energy",
 
+  "ultracraft:ultraman_energy.form": "Ultra: Ultraman",
+  "ultracraft:zoffy_energy.form": "Ultra: Zoffy",
+
   "item.ultracraft.ultra_eye": "Ultra Eye (UltraSeven)",
   "item.ultracraft.seven_energy": "UltraSeven Energy",
+
+  "ultracraft:seven_energy.form": "Ultra: UltraSeven",
 
   "item.ultracraft.color_timer_jack": "Color Timer (Ultraman Jack)",
   "item.ultracraft.jack_energy": "Ultraman Jack Energy",
@@ -92,5 +103,8 @@
   "item.ultracraft.pikari_brush": "Pikari Brush (Ultraman Zearth)",
   "item.ultracraft.great_energy": "Ultraman Great Energy",
   "item.ultracraft.powered_energy": "Ultraman Powered Energy",
-  "item.ultracraft.zearth_energy": "Ultraman Zearth Energy"
+  "item.ultracraft.zearth_energy": "Ultraman Zearth Energy",
+
+  "tab.ultracraft.misc": "Misc Ultra Items",
+  "tab.ultracraft.block": "Ultra Blocks"
 }

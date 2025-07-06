@@ -1,6 +1,8 @@
 package com.liasdan.ultracraft.items;
 
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.blocks.UltraBlocks;
+import com.liasdan.ultracraft.entity.MobsCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -31,12 +33,12 @@ public class UltraTabs {
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("umc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.LAND_OF_LIGHT_FRAGMENT.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
-					.title(Component.translatable("tab.supersentaicraft.misc")).build());
+					.title(Component.translatable("tab.ultracraft.misc")).build());
     
-//    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
-//    		CreativeModeTab.builder().icon(() -> new ItemStack(RangerBlocks.RYUSOULGER_ORE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(SuperSentaiCraftCore.MODID,"textures/gui/tab_misc_items.png"))
-//					.title(Component.translatable("tab.supersentaicraft.block")).build());
-//
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
+    		CreativeModeTab.builder().icon(() -> new ItemStack(UltraBlocks.METEOR.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
+					.title(Component.translatable("tab.ultracraft.block")).build());
+
     public static List<Item> ULTRAMAN= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
@@ -57,20 +59,24 @@ public class UltraTabs {
 		}
 		else if(event.getTab() == UltraTabs.MiscTab.get()) {
 
-			//event.accept(MobsCore.ZOLDERS_SPAWN_EGG);
+			event.accept(MobsCore.ZETTON_SPAWN_EGG);
+			event.accept(MobsCore.YAPOOL_SPAWN_EGG);
+			event.accept(MobsCore.BALTAN_SPAWN_EGG);
+			event.accept(MobsCore.ALIEN_MAGMA_SPAWN_EGG);
+			event.accept(MobsCore.SHADOW_SPAWN_EGG);
 			
 			for (int i = 0; i < UltraTabs.MISC.size(); i++)
 			{
 				event.accept( UltraTabs.MISC.get(i));
 			}
 		}
-//		else if(event.getTab() == UltraTabs.BlockTab.get()) {
-//			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
-//			{
-//				event.accept( UltraTabs.BLOCKS.get(i));
-//			}
-//
-//		}
+		else if(event.getTab() == UltraTabs.BlockTab.get()) {
+			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
+			{
+				event.accept( UltraTabs.BLOCKS.get(i));
+			}
+
+		}
 
 
     	

@@ -1,6 +1,7 @@
 package com.liasdan.ultracraft;
 
 import com.liasdan.ultracraft.blocks.UltraBlocks;
+import com.liasdan.ultracraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.events.ModClientEvents;
@@ -263,7 +264,11 @@ public class UltraCraftCore {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-			//event.registerEntityRenderer(MobsCore.ZOLDERS.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.ZETTON.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.YAPOOL.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.BALTAN.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.ALIEN_MAGMA.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.SHADOW.get(), BasicEntityRenderer::new);
 		}
 	}
 }
