@@ -80,6 +80,14 @@ public class EffectCore {
 	public static final Holder<MobEffect>  WIDE= EFFECT.register("wide",
 			() -> new 	BasicEffect(MobEffectCategory.NEUTRAL, 0x87ce87));
 
+	public static final Holder<MobEffect> STEP= EFFECT.register("step",
+			() -> new BasicEffect(MobEffectCategory.NEUTRAL, 0x9d3443)
+					.addAttributeModifier(Attributes.STEP_HEIGHT, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.step"), 1F, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
+	public static final Holder<MobEffect> LONG_ARM= EFFECT.register("long_arm",
+			() -> new LowGravityEffect(MobEffectCategory.NEUTRAL, 0xe60052)
+					.addAttributeModifier(Attributes.BLOCK_INTERACTION_RANGE, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.long_arm"), 1F, AttributeModifier.Operation.ADD_VALUE));
+
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);
 	}

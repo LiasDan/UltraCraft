@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ace",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+	"b": {
+      "item": "ultracraft:ace_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:ultra_rings"
+  }
+}

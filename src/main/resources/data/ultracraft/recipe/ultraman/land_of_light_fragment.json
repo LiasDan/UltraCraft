@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ultracraft:meteor"
+  },
+  "result": {
+    "id": "ultracraft:land_of_light_fragment"
+  },
+  "experience": 5,
+  "cookingtime": 200
+}

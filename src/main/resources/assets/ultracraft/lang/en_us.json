@@ -1,28 +1,31 @@
 {
-  "effect.supersentaicraft.flying": "Flying",
-  "effect.supersentaicraft.fire_punch": "Fire Punch",
-  "effect.supersentaicraft.punch": "Punch",
-  "effect.supersentaicraft.big": "Giant",
-  "effect.supersentaicraft.slash": "Slash",
-  "effect.supersentaicraft.fire_slash": "Fire Slash",
-  "effect.supersentaicraft.fire_shot": "Fire Shot",
-  "effect.supersentaicraft.shot_boost": "Shot Boost",
-  "effect.supersentaicraft.sneakboost": "Sneak Boost",
-  "effect.supersentaicraft.waterboost": "Water Boost",
-  "effect.supersentaicraft.frost_walker": "Frost Walker",
-  "effect.supersentaicraft.smoke": "Smoke",
+  "effect.ultracraft.flying": "Flying",
+  "effect.ultracraft.fire_punch": "Fire Punch",
+  "effect.ultracraft.punch": "Punch",
+  "effect.ultracraft.big": "Giant",
+  "effect.ultracraft.slash": "Slash",
+  "effect.ultracraft.fire_slash": "Fire Slash",
+  "effect.ultracraft.fire_shot": "Fire Shot",
+  "effect.ultracraft.shot_boost": "Shot Boost",
+  "effect.ultracraft.sneakboost": "Sneak Boost",
+  "effect.ultracraft.waterboost": "Water Boost",
+  "effect.ultracraft.frost_walker": "Frost Walker",
+  "effect.ultracraft.smoke": "Smoke",
 
-  "effect.supersentaicraft.boost": "Boost",
-  "effect.supersentaicraft.anti_poison": "Anti Poison",
-  "effect.supersentaicraft.small": "Shrink",
-  "effect.supersentaicraft.explosion_punch": "Explosive Punch",
-  "effect.supersentaicraft.reflect": "Reflect",
-  "effect.supersentaicraft.explosion_shot": "Explosive Shot",
-  "effect.supersentaicraft.thunder_shot": "Thunder Shot",
-  "effect.supersentaicraft.thunder_punch": "Thunder Punch",
-  "effect.supersentaicraft.flat": "Flatten",
-  "effect.supersentaicraft.stretch": "Stretch",
-  "effect.supersentaicraft.wide": "Wide",
+  "effect.ultracraft.boost": "Boost",
+  "effect.ultracraft.anti_poison": "Anti Poison",
+  "effect.ultracraft.small": "Shrink",
+  "effect.ultracraft.explosion_punch": "Explosive Punch",
+  "effect.ultracraft.reflect": "Reflect",
+  "effect.ultracraft.explosion_shot": "Explosive Shot",
+  "effect.ultracraft.thunder_shot": "Thunder Shot",
+  "effect.ultracraft.thunder_punch": "Thunder Punch",
+  "effect.ultracraft.flat": "Flatten",
+  "effect.ultracraft.stretch": "Stretch",
+  "effect.ultracraft.wide": "Wide",
+
+  "effect.ultracraft.long_arm": "Long Arm",
+  "effect.ultracraft.step": "Step",
 
   "entity.ultracraft.zetton": "Zetton",
   "entity.ultracraft.yapool": "Yapool",
@@ -62,15 +65,23 @@
   "item.ultracraft.color_timer_jack": "Color Timer (Ultraman Jack)",
   "item.ultracraft.jack_energy": "Ultraman Jack Energy",
 
+  "ultracraft:jack_energy.form": "Ultra: Ultraman Jack",
+
   "item.ultracraft.ultra_rings": "Ultra Rings (Ultraman Ace)",
   "item.ultracraft.color_timer_father": "Color Timer (Father of Ultra)",
   "item.ultracraft.ace_energy": "Ultraman Ace Energy",
   "item.ultracraft.father_energy": "Father of Ultra Energy",
 
+  "ultracraft:ace_energy.form": "Ultra: Ultraman Ace",
+  "ultracraft:father_energy.form": "Ultra: Father of Ultra",
+
   "item.ultracraft.ultra_badge": "Ultra Badge (Ultraman Taro)",
   "item.ultracraft.color_timer_mother": "Color Timer (Mother of Ultra)",
   "item.ultracraft.taro_energy": "Ultraman Taro Energy",
   "item.ultracraft.mother_energy": "Mother of Ultra Energy",
+
+  "ultracraft:taro_energy.form": "Ultra: Ultraman Taro",
+  "ultracraft:mother_energy.form": "Ultra: Mother of Ultra",
 
   "item.ultracraft.leo_ring": "Leo Ring (Ultraman Leo)",
   "item.ultracraft.color_timer_astra": "Color Timer (Astra)",
@@ -79,6 +90,12 @@
   "item.ultracraft.astra_energy": "Astra Energy",
   "item.ultracraft.king_energy": "Ultraman King Energy",
 
+  "ultracraft:leo_energy.form": "Ultra: Ultraman Leo",
+  "ultracraft:leo_mantle.form": "Ultra: Ultraman Leo",
+  "ultracraft:astra_energy.form": "Ultra: Astra",
+  "ultracraft:king_energy.form": "Ultra: Ultraman King",
+  "ultracraft:king_mantle.form": "Ultra: Ultraman King",
+
   "item.ultracraft.beam_flasher": "Beam Flasher (Ultraman Joneus)",
   "item.ultracraft.beam_flasher_elek": "Beam Flasher (Elek)",
   "item.ultracraft.beam_flasher_loto": "Beam Flasher (Loto)",
@@ -86,10 +103,17 @@
   "item.ultracraft.elek_energy": "Elek Energy",
   "item.ultracraft.loto_energy": "Loto Energy",
 
+  "ultracraft:joneus_energy.form": "Ultra: Ultraman Joneus",
+  "ultracraft:elek_energy.form": "Ultra: Elek",
+  "ultracraft:loto_energy.form": "Ultra: Loto",
+
   "item.ultracraft.bright_stick": "Bright Stick (Ultraman 80)",
   "item.ultracraft.bright_bracelet": "Bright Bracelet (Yullian)",
   "item.ultracraft.eighty_energy": "Ultraman 80 Energy",
   "item.ultracraft.yullian_energy": "Yullian Energy",
+
+  "ultracraft:eighty_energy.form": "Ultra: Ultraman 80",
+  "ultracraft:yullian_energy.form": "Ultra: Yullian",
 
   "item.ultracraft.usa_riser": "USA Riser (Ultraman Scott)",
   "item.ultracraft.usa_riser_chuck": "USA Riser (Ultraman Chuck)",
@@ -98,12 +122,20 @@
   "item.ultracraft.chuck_energy": "Ultraman Chuck Energy",
   "item.ultracraft.beth_energy": "Ultrawoman Beth Energy",
 
+  "ultracraft:scott_energy.form": "Ultra: Ultraman Scott",
+  "ultracraft:chuck_energy.form": "Ultra: Ultraman Chuck",
+  "ultracraft:beth_energy.form": "Ultra: Ultrawoman Beth",
+
   "item.ultracraft.delta_plasma": "Delta Plasma (Ultraman Great)",
   "item.ultracraft.flash_prism": "Flash Prism (Ultraman Powered)",
   "item.ultracraft.pikari_brush": "Pikari Brush (Ultraman Zearth)",
   "item.ultracraft.great_energy": "Ultraman Great Energy",
   "item.ultracraft.powered_energy": "Ultraman Powered Energy",
   "item.ultracraft.zearth_energy": "Ultraman Zearth Energy",
+
+  "ultracraft:great_energy.form": "Ultra: Ultraman Great",
+  "ultracraft:powered_energy.form": "Ultra: Ultraman Powered",
+  "ultracraft:zearth_energy.form": "Ultra: Ultraman Zearth",
 
   "tab.ultracraft.misc": "Misc Ultra Items",
   "tab.ultracraft.block": "Ultra Blocks"

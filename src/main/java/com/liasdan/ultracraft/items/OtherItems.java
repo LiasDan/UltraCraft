@@ -3,6 +3,7 @@ package com.liasdan.ultracraft.items;
 import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.others.BaseItem;
+import com.liasdan.ultracraft.items.others.LandOfLightFragment;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.Item;
@@ -21,7 +22,7 @@ public class OtherItems {
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","",""));
 
 	public static final DeferredItem<Item> LAND_OF_LIGHT_FRAGMENT = ITEMS.register("land_of_light_fragment",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.MISC));
+			() -> new LandOfLightFragment(new Item.Properties()).AddToTabList(UltraTabs.MISC));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

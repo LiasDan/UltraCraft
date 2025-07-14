@@ -164,8 +164,10 @@ public class UltraRiserItem extends UltraArmorItem {
 		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
 	}
 
-	public ResourceLocation getAnimationResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot) {
-		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "animations/ultra.animation.json");
+	public ResourceLocation getAnimationResource(ItemStack itemstack,UltraArmorItem animatable, EquipmentSlot slot) {
+
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Animation());
+
 	}
 
 	public static void reset_Form_Item(ItemStack  itemstack)

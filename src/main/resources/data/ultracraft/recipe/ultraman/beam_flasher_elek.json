@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "elek",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+	"b": {
+      "item": "ultracraft:elek_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:beam_flasher_elek"
+  }
+}

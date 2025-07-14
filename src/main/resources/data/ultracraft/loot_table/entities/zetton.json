@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:ultraman_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:zoffy_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:jack_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment"
+        }
+      ]
+    }
+  ]
+}

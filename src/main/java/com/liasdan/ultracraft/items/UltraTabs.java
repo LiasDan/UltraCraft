@@ -29,7 +29,7 @@ public class UltraTabs {
 	
     public static DeferredHolder<CreativeModeTab, CreativeModeTab> UltramanTab = CREATIVE_MODE_TABS.register("umc001", () ->
 			CreativeModeTab.builder().icon(() -> new ItemStack(UltramanItems.ULTRAMAN_HELMET.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
-					.title(Component.translatable("tab.ultracraft.ultraman_items")).build());
+					.title(Component.translatable("tab.ultracraft.ultraman")).build());
 
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("umc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.LAND_OF_LIGHT_FRAGMENT.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
