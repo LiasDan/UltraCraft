@@ -28,6 +28,7 @@ public class UltraFormChangeItem extends BaseItem {
 	private String BELT_TEX;
 	private String UPDATED_MODEL;
 	private String UPDATED_BELT;
+	private String UPDATED_MODEL_ANIMATION;
 	private String FLYING_MODEL;
 	private Boolean FLYING_TEXT = false;
 	public Item SHIFT_ITEM = Items.APPLE;
@@ -90,6 +91,10 @@ public class UltraFormChangeItem extends BaseItem {
 		return "geo/ultra.geo.json";
 	}
 
+	public String get_Animation() {
+		return (UPDATED_MODEL_ANIMATION!=null ? "animations/"+UPDATED_MODEL_ANIMATION : "animations/ultra.animation.json");
+	}
+
 	public String getBeltModel() {
 		if (UPDATED_BELT!=null) return UPDATED_BELT;
 		return "geo/ultrabelt.geo.json";
@@ -121,6 +126,17 @@ public class UltraFormChangeItem extends BaseItem {
 
 	public UltraFormChangeItem ChangeModel(String model) {
 		UPDATED_MODEL=model;
+		return this;
+	}
+
+	public UltraFormChangeItem ChangeModel(String model,String animation) {
+		UPDATED_MODEL=model;
+		UPDATED_MODEL_ANIMATION=animation;
+		return this;
+	}
+
+	public UltraFormChangeItem ChangeAnimation(String animation) {
+		UPDATED_MODEL_ANIMATION=animation;
 		return this;
 	}
 

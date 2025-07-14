@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:joneus_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:elek_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:loto_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:eighty_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:powered_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:great_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment"
+        }
+      ]
+    }
+  ]
+}

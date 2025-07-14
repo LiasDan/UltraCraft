@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:scott_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:chuck_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:beth_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:zearth_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment"
+        }
+      ]
+    }
+  ]
+}

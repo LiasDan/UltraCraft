@@ -111,7 +111,7 @@ public class UltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json"));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json","ultracape.animation.json"));
 
 	public static final DeferredItem<Item> KING_ENERGY = ITEMS.register("king_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","king","king_buckle",
