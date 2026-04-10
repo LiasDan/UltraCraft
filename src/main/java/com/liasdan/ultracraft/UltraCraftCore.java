@@ -4,6 +4,7 @@ import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
+import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
 import com.liasdan.ultracraft.events.ModClientEvents;
 import com.liasdan.ultracraft.events.ModCommonEvents;
 import com.liasdan.ultracraft.items.*;
@@ -106,132 +107,29 @@ public class UltraCraftCore {
 	@SubscribeEvent
 	public void addRenderLivingEvent(RenderLivingEvent.Pre event) {
 
-		if (event.getRenderer().getModel() instanceof PlayerModel model) {
-			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof ArmorItem belt) {
-				if (belt instanceof UltraRiserItem driver && driver.isTransformed(event.getEntity())) {
-					double tag = driver.getRenderType(event.getEntity().getItemBySlot(EquipmentSlot.FEET));
-					if (tag != 0) {
-						if (tag != 2) {
-							model.head.visible = false;
-						}
-						else {
-							model.head.visible = true;
-						}
-
-						if (tag != 3) {
-							model.leftLeg.visible = false;
-							model.rightLeg.visible = false;
-							model.leftArm.visible = false;
-							model.rightArm.visible = false;
-							model.body.visible = false;
-						}
-						else {
-							model.head.visible = true;
-							model.leftLeg.visible = true;
-							model.rightLeg.visible = true;
-							model.leftArm.visible = true;
-							model.rightArm.visible = true;
-							model.body.visible = true;
-						}
-
-						model.hat.visible = false;
-						model.leftSleeve.visible = false;
-						model.rightSleeve.visible = false;
-						model.leftPants.visible = false;
-						model.rightPants.visible = false;
-						model.jacket.visible = false;
-					}
-					else {
-						model.head.visible = true;
-						model.hat.visible = true;
+		if (event.getRenderer().getModel()instanceof PlayerModel model) {
+			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof UltraRiserItem
+					&& event.getEntity().getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
+				double tag = event.getEntity().getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).copyTag().getDouble("render_type");
+				if (tag != 0) {
+					model.setAllVisible(false);
+					if (tag != 1) model.head.visible = true;
+					else if (event.getEntity() instanceof BaseFootsoldierEntity) model.head.visible = false;
+					if (tag == 3) {
 						model.leftLeg.visible = true;
 						model.rightLeg.visible = true;
 						model.leftArm.visible = true;
 						model.rightArm.visible = true;
 						model.body.visible = true;
-						model.leftSleeve.visible = true;
-						model.rightSleeve.visible = true;
-						model.leftPants.visible = true;
-						model.rightPants.visible = true;
-						model.jacket.visible = true;
+					} else if (event.getEntity() instanceof BaseFootsoldierEntity) {
+						model.leftLeg.visible = false;
+						model.rightLeg.visible = false;
+						model.leftArm.visible = false;
+						model.rightArm.visible = false;
+						model.body.visible = false;
 					}
-				}
-				else if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).has(DataComponents.CUSTOM_DATA)) {
-					CompoundTag tag = event.getEntity().getItemBySlot(EquipmentSlot.FEET).get(DataComponents.CUSTOM_DATA).getUnsafe();
-					if (tag.getDouble("render_type") != 0) {
-						if (tag.getDouble("render_type") != 2) {
-							model.head.visible = false;
-						}
-						else {
-							model.head.visible = true;
-						}
-
-						if (tag.getDouble("render_type") != 3) {
-							model.leftLeg.visible = false;
-							model.rightLeg.visible = false;
-							model.leftArm.visible = false;
-							model.rightArm.visible = false;
-							model.body.visible = false;
-						}
-						else {
-							model.head.visible = true;
-							model.leftLeg.visible = true;
-							model.rightLeg.visible = true;
-							model.leftArm.visible = true;
-							model.rightArm.visible = true;
-							model.body.visible = true;
-						}
-
-						model.leftSleeve.visible = false;
-						model.rightSleeve.visible = false;
-						model.leftPants.visible = false;
-						model.rightPants.visible = false;
-						model.jacket.visible = false;
-					}
-					else {
-						model.head.visible = true;
-						model.hat.visible = true;
-						model.leftLeg.visible = true;
-						model.rightLeg.visible = true;
-						model.leftArm.visible = true;
-						model.rightArm.visible = true;
-						model.body.visible = true;
-						model.leftSleeve.visible = true;
-						model.rightSleeve.visible = true;
-						model.leftPants.visible = true;
-						model.rightPants.visible = true;
-						model.jacket.visible = true;
-					}
-				}
-				else {
-					model.head.visible = true;
-					model.hat.visible = true;
-					model.leftLeg.visible = true;
-					model.rightLeg.visible = true;
-					model.leftArm.visible = true;
-					model.rightArm.visible = true;
-					model.body.visible = true;
-					model.leftSleeve.visible = true;
-					model.rightSleeve.visible = true;
-					model.leftPants.visible = true;
-					model.rightPants.visible = true;
-					model.jacket.visible = true;
-				}
-			}
-			else {
-				model.head.visible = true;
-				model.hat.visible = true;
-				model.leftLeg.visible = true;
-				model.rightLeg.visible = true;
-				model.leftArm.visible = true;
-				model.rightArm.visible = true;
-				model.body.visible = true;
-				model.leftSleeve.visible = true;
-				model.rightSleeve.visible = true;
-				model.leftPants.visible = true;
-				model.rightPants.visible = true;
-				model.jacket.visible = true;
-			}
+				} else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(false);
+			} else if (event.getEntity() instanceof BaseFootsoldierEntity) model.setAllVisible(true);
 		}
 
 		float size = 1;
