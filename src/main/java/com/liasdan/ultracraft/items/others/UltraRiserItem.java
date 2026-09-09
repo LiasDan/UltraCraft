@@ -8,6 +8,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -32,6 +34,9 @@ public class UltraRiserItem extends UltraArmorItem {
 	public Item LEGS; 
 	public int Num_Base_Form_Item = 1;
 	public String BELT_TEXT;
+
+	public int Unlimited_Textures = 0;
+	public int Unlimited_Belt_Textures = 0;
 
 	public Boolean Has_basic_belt_info = true;
 	public Boolean Show_belt_form_info = true;
@@ -60,7 +65,7 @@ public class UltraRiserItem extends UltraArmorItem {
 		double form_double = 1;
 		UltraFormChangeItem form = get_Form_Item(stack, 1);
 		if (form.get_Show_Face())form_double=2;
-		if (form.get_Show_Under())form_double=3;
+		if (form.get_Show_under())form_double=3;
 		return form_double ;
 	}
 
@@ -109,6 +114,7 @@ public class UltraRiserItem extends UltraArmorItem {
 		if(isTransformed(player) && !player.level().isClientSide()) {
 			for (int n = 0; n < Num_Base_Form_Item; n++) {
 				UltraFormChangeItem form = get_Form_Item(itemstack, n + 1);
+				form.OnTransformation(itemstack,player);
 			}
 		}
 	}
@@ -136,38 +142,42 @@ public class UltraRiserItem extends UltraArmorItem {
 		return this;
 	}
 
-	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider, String riderName)
+	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity ranger, String rangerName)
 	{
 
-		boolean fly = rider instanceof Player player && player.getAbilities().flying;
+		boolean fly = ranger instanceof Player player && player.getAbilities().flying;
 
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			String belt = ((UltraRiserItem)itemstack.getItem()).BELT_TEXT;
-			if (((UltraRiserItem)itemstack.getItem()).BELT_TEXT==null) {
-				belt = get_Form_Item(itemstack,1).getBeltTex();
+			if (!isTransformed(ranger)) {
+				return "blank";
+			}
+			else {
+				if (((UltraRiserItem) itemstack.getItem()).BELT_TEXT == null) {
+					belt = get_Form_Item(itemstack, 1).getBeltTex();
+				}
 			}
 			return "belts/"+belt;
 		}
-		else return get_Form_Item(itemstack,1).getRangerName(riderName)+get_Form_Item(itemstack,1).getFormName(fly);
+
+		else return get_Form_Item(itemstack,1).getRangerName(rangerName)+get_Form_Item(itemstack,1).getFormName(fly);
 
 	}
 
+	public String getUnlimitedTextures(ItemStack itemstack, LivingEntity ranger, String rangerName ,int num)
+	{
+		return "blank";
+	}
 
 	public ResourceLocation getModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
-			return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel());
+			return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel(this.Rider));
 		}
-		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model(this.Rider));
 	}
 	
 	public ResourceLocation getBeltModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
-		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).getBeltModel());
-	}
-
-	public ResourceLocation getAnimationResource(ItemStack itemstack,UltraArmorItem animatable, EquipmentSlot slot) {
-
-		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Animation());
-
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Belt_Model());
 	}
 
 	public static void reset_Form_Item(ItemStack  itemstack)
@@ -199,13 +209,9 @@ public class UltraRiserItem extends UltraArmorItem {
 
 	public static void set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
-		if (!itemstack.has(DataComponents.CUSTOM_DATA)) {
-			itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
-		}
-		if (itemstack.getItem() instanceof UltraRiserItem driver) {
-			CompoundTag  tag = new CompoundTag();
-			Consumer<CompoundTag> data = form ->
-			{
+		if (!itemstack.has(DataComponents.CUSTOM_DATA)) itemstack.set(DataComponents.CUSTOM_DATA, CustomData.EMPTY);
+		if (itemstack.getItem() instanceof UltraRiserItem changer) {
+			Consumer<CompoundTag> data = form -> {
 				if (!form.getString("slot_tex" + SLOT).equals(ITEM.toString())) {
 					form.putString("slot_tex" + SLOT, ITEM.toString());
 					form.putBoolean("Update_form", true);
@@ -213,33 +219,37 @@ public class UltraRiserItem extends UltraArmorItem {
 				}
 			};
 
-			data.accept(tag);
 			CustomData.update(DataComponents.CUSTOM_DATA, itemstack, data);
-			driver.Extra_set_Form_Item(itemstack, ITEM, SLOT,tag);
+			changer.Extra_set_Form_Item(itemstack, ITEM, SLOT, itemstack.get(DataComponents.CUSTOM_DATA).copyTag());
 		}
 	}
+
+	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
+		if (currentSlot== EquipmentSlot.FEET) return get_Form_Item(itemstack, 1).get_Is_Belt_Glowing();
+		else if (isTransformed(livingEntity)) return get_Form_Item(itemstack, 1).get_Is_Glowing();
+		return false;
+	}
+	public void openInventory(ServerPlayer player, InteractionHand hand, ItemStack itemstack) {
+	}
+
 
 	public void Extra_set_Form_Item(ItemStack itemstack, Item ITEM, int SLOT, CompoundTag tag)
 	{
 	}
 
-	public  boolean getPartsForSlot(EquipmentSlot currentSlot,String  part) {
+	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {
 
 		switch (currentSlot) {
-		case HEAD ->{ 
-			if (part =="head") return true;
-		}
-		case CHEST -> {
-			if (part =="body") return true;
-			if (part =="rightArm") return true;
-			if (part =="leftArm") return true;
-		}
-		case LEGS -> {
+			case HEAD,CHEST,LEGS ->{
+				if (part =="head") return true;
+				if (part =="body") return true;
+				if (part =="rightArm") return true;
+				if (part =="leftArm") return true;
+				if (part =="rightLeg") return true;
+				if (part =="leftLeg") return true;
+			}
 
-			if (part =="rightLeg") return true;
-			if (part =="leftLeg") return true;
-		}
-		default -> {}
+			default -> {}
 		}
 		return false;
 	}
@@ -276,5 +286,12 @@ public class UltraRiserItem extends UltraArmorItem {
 			}
 		}
 		super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+	}
+
+	public boolean HasCape(ItemStack itemstack) {
+		for (int n = 0; n < Num_Base_Form_Item; n++) {
+			if(get_Form_Item(itemstack, n + 1).get_has_cape())return true;
+		}
+		return false;
 	}
 }

@@ -88,6 +88,9 @@ public class EffectCore {
 			() -> new LowGravityEffect(MobEffectCategory.NEUTRAL, 0xe60052)
 					.addAttributeModifier(Attributes.BLOCK_INTERACTION_RANGE, ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "effect.long_arm"), 1F, AttributeModifier.Operation.ADD_VALUE));
 
+	public static final Holder<MobEffect> FORM_LOCK = EFFECT.register("form_lock",
+			() -> new UncurableEffect(MobEffectCategory.HARMFUL, 0xffffff));
+
 	public static void register(IEventBus eventBus) {
 		EFFECT.register(eventBus);
 	}

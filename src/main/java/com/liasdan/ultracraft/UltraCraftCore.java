@@ -8,14 +8,14 @@ import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
 import com.liasdan.ultracraft.events.ModClientEvents;
 import com.liasdan.ultracraft.events.ModCommonEvents;
 import com.liasdan.ultracraft.items.*;
+import com.liasdan.ultracraft.items.heisei.*;
 import com.liasdan.ultracraft.items.others.*;
+import com.liasdan.ultracraft.items.showa.ShowaUltramanItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -71,7 +71,29 @@ public class UltraCraftCore {
 
 		OtherItems.register(modEventBus);
 
-		UltramanItems.register(modEventBus);
+		ShowaUltramanItems.register(modEventBus);
+		TigaItems.register(modEventBus);
+		DynaItems.register(modEventBus);
+		GaiaItems.register(modEventBus);
+		NeosItems.register(modEventBus);
+		CosmosItems.register(modEventBus);
+		NexusItems.register(modEventBus);
+		MaxItems.register(modEventBus);
+		MebiusItems.register(modEventBus);
+		//ZeroItems.register(modEventBus);
+		//GingaItems.register(modEventBus);
+		//XItems.register(modEventBus);
+		//OrbItems.register(modEventBus);
+		//GeedItems.register(modEventBus);
+		//RBItems.register(modEventBus);
+		//TaigaItems.register(modEventBus);
+		//ZItems.register(modEventBus);
+		//TriggerItems.register(modEventBus);
+		//DeckerItems.register(modEventBus);
+		//BlazarItems.register(modEventBus);
+		//ArcItems.register(modEventBus);
+		//OmegaItems.register(modEventBus);
+		//TeoItems.register(modEventBus);
 
 		UltraBlocks.register(modEventBus);
 

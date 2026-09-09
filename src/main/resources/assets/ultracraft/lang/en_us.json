@@ -26,6 +26,7 @@
 
   "effect.ultracraft.long_arm": "Long Arm",
   "effect.ultracraft.step": "Step",
+  "effect.ultracraft.form_lock": "Form Lock",
 
   "entity.ultracraft.zetton": "Zetton",
   "entity.ultracraft.yapool": "Yapool",
@@ -40,7 +41,7 @@
   "item.ultracraft.shadow_spawn_egg": "Ultraman Shadow Spawn Egg",
 
   //Ultraman
-  "tab.ultracraft.ultraman": "Ultraman",
+  "tab.ultracraft.ultraman": "Showa Ultraman",
 
   "item.ultracraft.land_of_light_fragment": "Land of Light Fragment",
   "block.ultracraft.meteor": "Meteor Block",
@@ -49,42 +50,44 @@
   "item.ultracraft.ultraman_torso": "Ultraman Chestplate",
   "item.ultracraft.ultraman_legs": "Ultraman Legs",
 
-  "item.ultracraft.beta_capsule": "Beta Capsule (Ultraman)",
-  "item.ultracraft.beta_capsule_zoffy": "Beta Capsule (Zoffy)",
+  "item.ultracraft.beta_capsule": "Beta Capsule",
+  "item.ultracraft.beta_capsule_zoffy": "Beta Capsule",
   "item.ultracraft.ultraman_energy": "Ultraman Energy",
   "item.ultracraft.zoffy_energy": "Zoffy Energy",
 
   "ultracraft:ultraman_energy.form": "Ultra: Ultraman",
   "ultracraft:zoffy_energy.form": "Ultra: Zoffy",
 
-  "item.ultracraft.ultra_eye": "Ultra Eye (UltraSeven)",
+  "item.ultracraft.ultra_eye": "Ultra Eye",
   "item.ultracraft.seven_energy": "UltraSeven Energy",
+  "item.ultracraft.seven_x_energy": "UltraSeven X Energy",
 
   "ultracraft:seven_energy.form": "Ultra: UltraSeven",
+  "ultracraft:seven_x_energy.form": "Ultra: UltraSeven X",
 
-  "item.ultracraft.color_timer_jack": "Color Timer (Ultraman Jack)",
+  "item.ultracraft.color_timer_jack": "Color Timer",
   "item.ultracraft.jack_energy": "Ultraman Jack Energy",
 
   "ultracraft:jack_energy.form": "Ultra: Ultraman Jack",
 
-  "item.ultracraft.ultra_rings": "Ultra Rings (Ultraman Ace)",
-  "item.ultracraft.color_timer_father": "Color Timer (Father of Ultra)",
+  "item.ultracraft.ultra_rings": "Ultra Rings",
+  "item.ultracraft.color_timer_father": "Color Timer",
   "item.ultracraft.ace_energy": "Ultraman Ace Energy",
   "item.ultracraft.father_energy": "Father of Ultra Energy",
 
   "ultracraft:ace_energy.form": "Ultra: Ultraman Ace",
   "ultracraft:father_energy.form": "Ultra: Father of Ultra",
 
-  "item.ultracraft.ultra_badge": "Ultra Badge (Ultraman Taro)",
-  "item.ultracraft.color_timer_mother": "Color Timer (Mother of Ultra)",
+  "item.ultracraft.ultra_badge": "Ultra Badge",
+  "item.ultracraft.color_timer_mother": "Color Timer",
   "item.ultracraft.taro_energy": "Ultraman Taro Energy",
   "item.ultracraft.mother_energy": "Mother of Ultra Energy",
 
   "ultracraft:taro_energy.form": "Ultra: Ultraman Taro",
   "ultracraft:mother_energy.form": "Ultra: Mother of Ultra",
 
-  "item.ultracraft.leo_ring": "Leo Ring (Ultraman Leo)",
-  "item.ultracraft.color_timer_astra": "Color Timer (Astra)",
+  "item.ultracraft.leo_ring": "Leo Ring",
+  "item.ultracraft.color_timer_astra": "Color Timer",
   "item.ultracraft.king_buckle": "Ultraman King's Buckle",
   "item.ultracraft.leo_energy": "Ultraman Leo Energy",
   "item.ultracraft.astra_energy": "Astra Energy",
@@ -96,9 +99,9 @@
   "ultracraft:king_energy.form": "Ultra: Ultraman King",
   "ultracraft:king_mantle.form": "Ultra: Ultraman King",
 
-  "item.ultracraft.beam_flasher": "Beam Flasher (Ultraman Joneus)",
-  "item.ultracraft.beam_flasher_elek": "Beam Flasher (Elek)",
-  "item.ultracraft.beam_flasher_loto": "Beam Flasher (Loto)",
+  "item.ultracraft.beam_flasher": "Beam Flasher",
+  "item.ultracraft.beam_flasher_elek": "Beam Flasher",
+  "item.ultracraft.beam_flasher_loto": "Beam Flasher",
   "item.ultracraft.joneus_energy": "Ultraman Joneus Energy",
   "item.ultracraft.elek_energy": "Elek Energy",
   "item.ultracraft.loto_energy": "Loto Energy",
@@ -107,17 +110,17 @@
   "ultracraft:elek_energy.form": "Ultra: Elek",
   "ultracraft:loto_energy.form": "Ultra: Loto",
 
-  "item.ultracraft.bright_stick": "Bright Stick (Ultraman 80)",
-  "item.ultracraft.bright_bracelet": "Bright Bracelet (Yullian)",
+  "item.ultracraft.bright_stick": "Bright Stick",
+  "item.ultracraft.bright_bracelet": "Bright Bracelet",
   "item.ultracraft.eighty_energy": "Ultraman 80 Energy",
   "item.ultracraft.yullian_energy": "Yullian Energy",
 
   "ultracraft:eighty_energy.form": "Ultra: Ultraman 80",
   "ultracraft:yullian_energy.form": "Ultra: Yullian",
 
-  "item.ultracraft.usa_riser": "USA Riser (Ultraman Scott)",
-  "item.ultracraft.usa_riser_chuck": "USA Riser (Ultraman Chuck)",
-  "item.ultracraft.beth_riser": "USA Riser (Ultrawoman Beth)",
+  "item.ultracraft.usa_riser": "USA Riser",
+  "item.ultracraft.usa_riser_chuck": "USA Riser",
+  "item.ultracraft.beth_riser": "USA Riser",
   "item.ultracraft.scott_energy": "Ultraman Scott Energy",
   "item.ultracraft.chuck_energy": "Ultraman Chuck Energy",
   "item.ultracraft.beth_energy": "Ultrawoman Beth Energy",
@@ -126,9 +129,9 @@
   "ultracraft:chuck_energy.form": "Ultra: Ultraman Chuck",
   "ultracraft:beth_energy.form": "Ultra: Ultrawoman Beth",
 
-  "item.ultracraft.delta_plasma": "Delta Plasma (Ultraman Great)",
-  "item.ultracraft.flash_prism": "Flash Prism (Ultraman Powered)",
-  "item.ultracraft.pikari_brush": "Pikari Brush (Ultraman Zearth)",
+  "item.ultracraft.delta_plasma": "Delta Plasma",
+  "item.ultracraft.flash_prism": "Flash Prism",
+  "item.ultracraft.pikari_brush": "Pikari Brush",
   "item.ultracraft.great_energy": "Ultraman Great Energy",
   "item.ultracraft.powered_energy": "Ultraman Powered Energy",
   "item.ultracraft.zearth_energy": "Ultraman Zearth Energy",
@@ -136,6 +139,153 @@
   "ultracraft:great_energy.form": "Ultra: Ultraman Great",
   "ultracraft:powered_energy.form": "Ultra: Ultraman Powered",
   "ultracraft:zearth_energy.form": "Ultra: Ultraman Zearth",
+
+  //TDG
+  "tab.ultracraft.tdg": "Ultraman Tiga, Dyna & Gaia",
+
+  "item.ultracraft.tiga_sparklence": "Tiga Sparklence",
+  "item.ultracraft.black_sparklence": "Black Sparklence",
+  "item.ultracraft.camearra_sparklence": "Camearra's Sparklence",
+  "item.ultracraft.tiga_multi_type_energy": "Ultraman Tiga Energy",
+  "item.ultracraft.tiga_power_type_energy": "Ultraman Tiga (Power Type) Energy",
+  "item.ultracraft.tiga_sky_type_energy": "Ultraman Tiga (Sky Type) Energy",
+  "item.ultracraft.tiga_dark_energy": "Ultraman Tiga Dark Energy",
+  "item.ultracraft.tiga_dark_tornado_energy": "Ultraman Tiga Dark (Tornado Type) Energy",
+  "item.ultracraft.tiga_dark_blast_energy": "Ultraman Tiga Dark (Blast Type) Energy",
+
+  "ultracraft:tiga_multi_type_energy.form": "Ultra: Ultraman Tiga §eMulti Type",
+  "ultracraft:tiga_power_type_energy.form": "Ultra: Ultraman Tiga §cPower Type",
+  "ultracraft:tiga_sky_type_energy.form": "Ultra: Ultraman Tiga §9Sky Type",
+  "ultracraft:tiga_dark_energy.form": "Ultra: Ultraman Tiga Dark",
+  "ultracraft:tiga_dark_tornado_energy.form": "Ultra: Ultraman Tiga Dark §cTornado Type",
+  "ultracraft:tiga_dark_blast_energy.form": "Ultra: Ultraman Tiga Dark §9Blast Type",
+
+  "ultracraft:camearra_energy.form": "Giant of Darkness: Camearra",
+
+  "item.ultracraft.lieflasher": "Lieflasher",
+  "item.ultracraft.dyna_flash_type_energy": "Ultraman Dyna Energy",
+  "item.ultracraft.dyna_strong_type_energy": "Ultraman Dyna (Strong Type) Energy",
+  "item.ultracraft.dyna_miracle_type_energy": "Ultraman Dyna (Miracle Type) Energy",
+
+  "ultracraft:dyna_flash_type_energy.form": "Ultra: Ultraman Dyna §eFlash Type",
+  "ultracraft:dyna_strong_type_energy.form": "Ultra: Ultraman Dyna §cStrong Type",
+  "ultracraft:dyna_miracle_type_energy.form": "Ultra: Ultraman Dyna §9Miracle Type",
+
+  "item.ultracraft.photoelectron_tube": "Photoelectron Tube",
+  "item.ultracraft.esplender": "Esplender",
+  "item.ultracraft.agulater": "Agulater",
+  "item.ultracraft.gaia_v1_energy": "Ultraman Gaia V1 Energy",
+  "item.ultracraft.gaia_v2_energy": "Ultraman Gaia V2 Energy",
+  "item.ultracraft.gaia_supreme_energy": "Ultraman Gaia (Supreme Version) Energy",
+  "item.ultracraft.gaia_super_supreme_energy": "Ultraman Gaia (Super Supreme Version) Energy",
+  "item.ultracraft.agul_v1_energy": "Ultraman Agul V1 Energy",
+  "item.ultracraft.agul_v2_energy": "Ultraman Agul V2 Energy",
+  "item.ultracraft.agul_supreme_energy": "Ultraman Agul (Supreme Type) Energy",
+
+  "ultracraft:gaia_v1_energy.form": "Ultra: Ultraman Gaia V1",
+  "ultracraft:gaia_v2_energy.form": "Ultra: Ultraman Gaia V2",
+  "ultracraft:gaia_supreme_energy.form": "Ultra: Ultraman Gaia §6Supreme Version",
+  "ultracraft:gaia_super_supreme_energy.form": "Ultra: Ultraman Gaia §6Super Supreme Version",
+  "ultracraft:agul_v1_energy.form": "Ultra: Ultraman Agul V1",
+  "ultracraft:agul_v2_energy.form": "Ultra: Ultraman Agul V2",
+  "ultracraft:agul_supreme_energy.form": "Ultra: Ultraman Agul §6Supreme Version",
+
+  //Ultraman Neos
+  "tab.ultracraft.neos": "Ultraman Neos",
+
+  "item.ultracraft.estrellar": "Estrellar",
+  "item.ultracraft.ultraseven_21_beam_lamp": "Beam Lamp",
+  "item.ultracraft.neos_energy": "Ultraman Neos Energy",
+  "item.ultracraft.ultraseven_21_energy": "Ultraseven 21 Energy",
+
+  "ultracraft:neos_energy.form": "Ultra: Ultraman Neos",
+  "ultracraft:ultraseven_21_energy.form": "Ultra: UltraSeven 21",
+
+  //Ultraman Cosmos
+  "tab.ultracraft.cosmos": "Ultraman Cosmos",
+
+  "item.ultracraft.cosmo_pluck": "Cosmo Pluck",
+  "item.ultracraft.just_lancer": "Just Lancer",
+  "item.ultracraft.color_timer_legend": "Color Timer",
+  "item.ultracraft.cosmos_luna_energy": "Ultraman Cosmos Energy",
+  "item.ultracraft.cosmos_corona_energy": "Ultraman Cosmos (Corona Mode) Energy",
+  "item.ultracraft.cosmos_eclipse_energy": "Ultraman Cosmos (Eclipse Mode) Energy",
+  "item.ultracraft.cosmos_miracluna_energy": "Ultraman Cosmos (Miracluna Mode) Energy",
+  "item.ultracraft.cosmos_space_corona_energy": "Ultraman Cosmos (Space Corona Mode) Energy",
+  "item.ultracraft.cosmos_future_energy": "Ultraman Cosmos (Future Mode) Energy",
+  "item.ultracraft.justice_energy": "Ultraman Justice Energy",
+  "item.ultracraft.justice_crusher_energy": "Ultraman Justice (Crusher Mode) Energy",
+
+  "ultracraft:cosmos_luna_energy.form": "Ultra: Ultraman Cosmos",
+  "ultracraft:cosmos_corona_energy.form": "Ultra: Ultraman Cosmos §cCorona Mode",
+  "ultracraft:cosmos_eclipse_energy.form": "Ultra: Ultraman Cosmos §9Eclipse Mode",
+  "ultracraft:cosmos_miracluna_energy.form": "Ultra: Ultraman Cosmos §6Miracluna Mode",
+  "ultracraft:cosmos_space_corona_energy.form": "Ultra: Ultraman Cosmos §5Space Corona Mode",
+  "ultracraft:cosmos_future_energy.form": "Ultra: Ultraman Cosmos §6Future Mode",
+
+  "ultracraft:justice_energy.form": "Ultra: Ultraman Justice",
+  "ultracraft:justice_crusher_energy.form": "Ultra: Ultraman Justce §cCrusher Mode",
+
+  "ultracraft:legend_energy.form": "Ultra: Ultraman Legend",
+
+  //Ultraman Nexus & The Next
+  "tab.ultracraft.nexus": "Ultraman Nexus & The Next",
+
+  "item.ultracraft.evoltruster": "Evoltruster",
+  "item.ultracraft.evoltruster_noa": "Evoltruster",
+  "item.ultracraft.energy_core": "Energy Core",
+  "item.ultracraft.nexus_anphans_energy": "Ultraman Nexus Energy",
+  "item.ultracraft.nexus_junis_energy": "Ultraman Nexus Junis Energy",
+  "item.ultracraft.nexus_junis_blue_energy": "Ultraman Nexus Junis Blue Energy",
+  "item.ultracraft.noa_energy": "Ultraman Noa Energy",
+  "item.ultracraft.the_next_anphans_energy": "Ultraman the Next Energy",
+  "item.ultracraft.the_next_junis_energy": "Ultraman the Next Junis Energy",
+
+  "ultracraft:nexus_anphans_energy.form": "Ultra: Ultraman Nexus",
+  "ultracraft:nexus_junis_energy.form": "Ultra: Ultraman Nexus Junis",
+  "ultracraft:nexus_junis_blue_energy.form": "Ultra: Ultraman Nexus Junis Blue",
+  "ultracraft:noa_energy.form": "Ultra: Ultraman Noa",
+  "ultracraft:the_next_anphans_energy.form": "Ultra: Ultraman the Next",
+  "ultracraft:the_next_junis_energy.form": "Ultra: Ultraman the Next Junis",
+
+  //Ultraman Max
+  "tab.ultracraft.max": "Ultraman Max",
+
+  "item.ultracraft.max_spark": "Max Spark",
+  "item.ultracraft.color_timer_xenon": "Color Timer",
+  "item.ultracraft.max_energy": "Ultraman Max Energy",
+  "item.ultracraft.xenon_energy": "Ultraman Xenon Energy",
+
+  "ultracraft:max_energy.form": "Ultra: Ultraman Max",
+  "ultracraft:xenon_energy.form": "Ultra: Ultraman Xenon",
+
+  //Ultraman Mebius
+  "tab.ultracraft.mebius": "Ultraman Mebius",
+
+  "item.ultracraft.mebius_brace": "Mebius Brace",
+  "item.ultracraft.knight_brace": "Knight Brace",
+  "item.ultracraft.knight_brace_tsurugi": "Knight Brace",
+  "item.ultracraft.knight_mebius_brace": "Knight Mebius Brace",
+  "item.ultracraft.mebius_energy": "Ultraman Mebius Energy",
+  "item.ultracraft.hikari_energy": "Ultraman Hikari Energy",
+  "item.ultracraft.tsurugi_energy": "Hunter Knight Tsurugi Energy",
+  "item.ultracraft.guts_energy": "GUTS Energy",
+  "item.ultracraft.mebius_phoenix_brave_energy": "Ultraman Mebius Phoenix Brave Energy",
+  "item.ultracraft.mebius_infinity_energy": "Ultraman Mebius Infinity Energy",
+
+  "ultracraft:mebius_energy.form": "Ultra: Ultraman Mebius",
+  "ultracraft:mebius_brave_energy.form": "Ultra: Ultraman Mebius Brave",
+  "ultracraft:guts_energy.form": "Ultra: Ultraman Mebius Burning Brave",
+  "ultracraft:mebius_phoenix_brave_energy.form": "Ultra: Ultraman Mebius Phoenix Brave",
+  "ultracraft:mebius_infinity_energy.form": "Ultra: Ultraman Mebius Infinity",
+  "ultracraft:hikari_energy.form": "Ultra: Ultraman Hikari",
+  "ultracraft:tsurugi_energy.form": "Villain: Hunter Knight Tsurugi",
+
+  //Other Ultras
+  "item.ultracraft.nice_energy": "Nice Energy",
+  "item.ultracraft.nice_dreamer": "Nice Dreamer",
+
+  "ultracraft:nice_energy.form": "Ultra: Ultraman Nice",
 
   "tab.ultracraft.misc": "Misc Ultra Items",
   "tab.ultracraft.block": "Ultra Blocks"

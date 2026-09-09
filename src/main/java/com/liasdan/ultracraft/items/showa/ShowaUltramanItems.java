@@ -1,7 +1,9 @@
-package com.liasdan.ultracraft.items;
+package com.liasdan.ultracraft.items.showa;
 
 import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.effect.EffectCore;
+import com.liasdan.ultracraft.items.OtherItems;
+import com.liasdan.ultracraft.items.UltraTabs;
 import com.liasdan.ultracraft.items.others.UltraArmorItem;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
 import com.liasdan.ultracraft.items.others.UltraRiserItem;
@@ -12,7 +14,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class UltramanItems {
+public class ShowaUltramanItems {
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UltraCraftCore.MODID);
 
@@ -34,6 +36,13 @@ public class UltramanItems {
 
 	public static final DeferredItem<Item> SEVEN_ENERGY = ITEMS.register("seven_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","ultra_seven","",
+					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+	public static final DeferredItem<Item> SEVEN_X_ENERGY = ITEMS.register("seven_x_energy",
+			() -> new UltraFormChangeItem(new Item.Properties(),0,"_x","ultra_seven","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
@@ -86,7 +95,7 @@ public class UltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json","ultracape.animation.json"));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json"));
 
 	public static final DeferredItem<Item> LEO_ENERGY = ITEMS.register("leo_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","leo","",
@@ -111,7 +120,7 @@ public class UltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json","ultracape.animation.json"));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json"));
 
 	public static final DeferredItem<Item> KING_ENERGY = ITEMS.register("king_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","king","king_buckle",
@@ -210,66 +219,59 @@ public class UltramanItems {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
-	public static final DeferredItem<Item> ULTRAMAN_HELMET = ITEMS.register("ultraman_head",
-            () -> new UltraArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
-    public static final DeferredItem<Item> ULTRAMAN_CHESTPLATE = ITEMS.register("ultraman_torso",
-            () -> new UltraArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
-    public static final DeferredItem<Item> ULTRAMAN_LEGGINGS = ITEMS.register("ultraman_legs",
-            () -> new UltraArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
-    
     public static final DeferredItem<Item> BETA_CAPSULE = ITEMS.register("beta_capsule",
-    		() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultraman",ULTRAMAN_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+    		() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultraman",ULTRAMAN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> BETA_CAPSULE_ZOFFY = ITEMS.register("beta_capsule_zoffy",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zoffy",ZOFFY_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zoffy",ZOFFY_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> ULTRA_EYE = ITEMS.register("ultra_eye",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultra_seven",SEVEN_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultra_seven",SEVEN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> COLOR_TIMER_JACK = ITEMS.register("color_timer_jack",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"jack",JACK_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"jack",JACK_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> ULTRA_RINGS = ITEMS.register("ultra_rings",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ace",ACE_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ace",ACE_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> COLOR_TIMER_FATHER = ITEMS.register("color_timer_father",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"father_of_ultra",FATHER_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"father_of_ultra",FATHER_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> ULTRA_BADGE = ITEMS.register("ultra_badge",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"taro",TARO_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"taro",TARO_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> COLOR_TIMER_MOTHER = ITEMS.register("color_timer_mother",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"mother_of_ultra",MOTHER_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"mother_of_ultra",MOTHER_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> LEO_RING = ITEMS.register("leo_ring",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"leo",LEO_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"leo",LEO_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> COLOR_TIMER_ASTRA = ITEMS.register("color_timer_astra",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"astra",ASTRA_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"astra",ASTRA_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> KING_BUCKLE = ITEMS.register("king_buckle",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"king",KING_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"king",KING_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> BEAM_FLASHER = ITEMS.register("beam_flasher",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"joneus",JONEUS_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"joneus",JONEUS_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> BEAM_FLASHER_ELEK = ITEMS.register("beam_flasher_elek",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"elek",ELEK_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"elek",ELEK_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> BEAM_FLASHER_LOTO = ITEMS.register("beam_flasher_loto",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"loto",LOTO_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"loto",LOTO_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> BRIGHT_STICK = ITEMS.register("bright_stick",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"eighty",EIGHTY_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"eighty",EIGHTY_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> BRIGHT_BRACELET = ITEMS.register("bright_bracelet",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"yullian",YULLIAN_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"yullian",YULLIAN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> USA_RISER = ITEMS.register("usa_riser",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"scott",SCOTT_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"scott",SCOTT_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> USA_RISER_CHUCK = ITEMS.register("usa_riser_chuck",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"chuck",CHUCK_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"chuck",CHUCK_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> BETH_RISER = ITEMS.register("beth_riser",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"beth",BETH_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"beth",BETH_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> DELTA_PLASMA = ITEMS.register("delta_plasma",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"great",GREAT_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"great",GREAT_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> FLASH_PRISM = ITEMS.register("flash_prism",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"powered",POWERED_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"powered",POWERED_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> PIKARI_BRUSH = ITEMS.register("pikari_brush",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zearth",ZEARTH_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zearth",ZEARTH_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
