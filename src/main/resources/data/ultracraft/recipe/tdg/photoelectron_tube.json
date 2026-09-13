@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tiga",
+  "pattern": [
+    "aaa",
+    "gbg",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+	"b": {
+      "item": "ultracraft:gaia_v1_energy"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "id": "ultracraft:photoelectron_tube"
+  }
+}

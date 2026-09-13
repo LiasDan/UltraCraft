@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "turbo",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+	"a": {
+      "item": "ultracraft:knight_mebius_brace"
+    }
+  },
+  "result": {
+    "id": "ultracraft:mebius_brace"
+  }
+}

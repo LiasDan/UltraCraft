@@ -272,6 +272,7 @@
   "item.ultracraft.guys_energy": "GUYS Energy",
   "item.ultracraft.mebius_phoenix_brave_energy": "Ultraman Mebius Phoenix Brave Energy",
   "item.ultracraft.mebius_infinity_energy": "Ultraman Mebius Infinity Energy",
+  "item.ultracraft.arb_gear": "Arb Gear",
 
   "ultracraft:mebius_energy.form": "Ultra: Ultraman Mebius",
   "ultracraft:mebius_brave_energy.form": "Ultra: Ultraman Mebius Brave",
@@ -280,6 +281,7 @@
   "ultracraft:mebius_infinity_energy.form": "Ultra: Ultraman Mebius Infinity",
   "ultracraft:hikari_energy.form": "Ultra: Ultraman Hikari",
   "ultracraft:tsurugi_energy.form": "Villain: Hunter Knight Tsurugi",
+  "ultracraft:arb_gear.form": "Ultra: Ultraman Hikari (Armor of the Hero)",
 
   //Other Ultras
   "item.ultracraft.nice_energy": "Nice Energy",

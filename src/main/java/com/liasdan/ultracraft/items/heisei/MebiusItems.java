@@ -68,6 +68,13 @@ public class MebiusItems {
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.MEBIUS));
+    public static final DeferredItem<Item> ARB_GEAR  = ITEMS.register("arb_gear",
+            () -> new UltraFormChangeItem(new Item.Properties(),0,"_arb_gear","hikari","",
+                    new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+                    new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.MEBIUS));
 
     public static final DeferredItem<Item> MEBIUS_BRACE = ITEMS.register("mebius_brace",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"mebius",MEBIUS_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
