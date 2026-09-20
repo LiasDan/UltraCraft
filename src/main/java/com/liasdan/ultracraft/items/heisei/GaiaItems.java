@@ -4,6 +4,7 @@ import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
+import com.liasdan.ultracraft.items.heisei.gaia.AgulaterItem;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
 import com.liasdan.ultracraft.items.others.UltraRiserItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -80,7 +81,7 @@ public class GaiaItems {
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"gaia",GAIA_V1_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
     public static final DeferredItem<Item> AGULATER = ITEMS.register("agulater",
-            () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"agul",AGUL_V1_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+            () -> new AgulaterItem(ArmorMaterials.DIAMOND,"agul",AGUL_V1_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

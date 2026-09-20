@@ -4,9 +4,8 @@ import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
-import com.liasdan.ultracraft.items.heisei.mebius.MebiusBraceItem;
+import com.liasdan.ultracraft.items.heisei.mebius.*;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
-import com.liasdan.ultracraft.items.others.UltraRiserItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorMaterials;
@@ -32,14 +31,14 @@ public class MebiusItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("ultrabrace.geo.json").AddToTabList(UltraTabs.MEBIUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("right_brace1.geo.json").AddToTabList(UltraTabs.MEBIUS));
     public static final DeferredItem<Item> TSURUGI_ENERGY = ITEMS.register("tsurugi_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","tsurugi","knight_brace",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("ultrabrace.geo.json"));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("right_brace1.geo.json"));
 
     public static final DeferredItem<Item> MEBIUS_BRAVE_ENERGY = ITEMS.register("mebius_brave_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","mebius_brave","mebius_brave_brace",
@@ -75,14 +74,14 @@ public class MebiusItems {
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("ultrabrace.geo.json").AddToTabList(UltraTabs.MEBIUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("right_brace1.geo.json").AddToTabList(UltraTabs.MEBIUS));
 
     public static final DeferredItem<Item> MEBIUS_BRACE = ITEMS.register("mebius_brace",
             () -> new MebiusBraceItem(ArmorMaterials.DIAMOND,"mebius",MEBIUS_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
     public static final DeferredItem<Item> KNIGHT_BRACE = ITEMS.register("knight_brace",
-            () -> new MebiusBraceItem(ArmorMaterials.DIAMOND,"hikari",HIKARI_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+            () -> new KnightBraceItem(ArmorMaterials.DIAMOND,"hikari",HIKARI_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
     public static final DeferredItem<Item> KNIGHT_BRACE_TSURUGI = ITEMS.register("knight_brace_tsurugi",
-            () -> new MebiusBraceItem(ArmorMaterials.DIAMOND,"tsurugi",TSURUGI_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+            () -> new KnightBraceItem(ArmorMaterials.DIAMOND,"tsurugi",TSURUGI_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
     public static final DeferredItem<Item> KNIGHT_MEBIUS_BRACE = ITEMS.register("knight_mebius_brace",
             () -> new MebiusBraceItem(ArmorMaterials.DIAMOND,"mebius_brave",MEBIUS_BRAVE_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.MEBIUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
