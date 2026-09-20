@@ -18,12 +18,12 @@ public class MaxItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UltraCraftCore.MODID);
 
     public static final DeferredItem<Item> MAX_ENERGY = ITEMS.register("max_energy",
-            () -> new UltraFormChangeItem(new Item.Properties(),0,"","max","",
+            () -> new UltraFormChangeItem(new Item.Properties(),0,"","max","max_brace",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.MAX));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeBeltModel("geo/ultrabrace.geo.json").AddToTabList(UltraTabs.MAX));
     public static final DeferredItem<Item> XENON_ENERGY = ITEMS.register("xenon_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","xenon","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
