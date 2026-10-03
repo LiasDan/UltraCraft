@@ -3,6 +3,7 @@ package com.liasdan.ultracraft.items.others;
 
 import com.google.common.collect.Lists;
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.client.renderer.armor.render_layer.render_layer_info.RenderLayerInfo;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import net.minecraft.core.NonNullList;
@@ -88,6 +89,8 @@ public class UltraFormChangeItem extends BaseItem {
 
 	private int Store_num =1;
 
+	private Double henshinTick = 30d;
+
 
 	public UltraFormChangeItem(Properties properties, int belt, String formName, String rangername, String beltTex, MobEffectInstance... effects) {
 		super( properties);
@@ -133,6 +136,10 @@ public class UltraFormChangeItem extends BaseItem {
 	public Item getSHIFT_ITEM(){return SHIFT_ITEM;}
 
 	public UltraFormChangeItem getAlsoChange2ndSlot(){return alsoChange2ndSlot;}
+
+	public Double getHenshinTick() {
+		return henshinTick;
+	}
 
 	public String getBeltTex() {
 		return BELT_TEX;
@@ -381,9 +388,9 @@ public class UltraFormChangeItem extends BaseItem {
 
 
 	public Boolean iscompatible(UltraRiserItem belt) {
-		if (belt.Rider.equals(RANGER_NAME)) return true;
+		if (belt.ultraName.equals(RANGER_NAME)) return true;
 		for (String str : compatibilityList) {
-			if (str==belt.Rider) return true;
+			if (str==belt.ultraName) return true;
 		}
 		ItemStack itemstack=new ItemStack(belt);
 		return itemstack.is(ItemTags.create(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "form_change_item/works_with/" +RANGER_NAME+FORM_NAME)));
@@ -457,7 +464,7 @@ public class UltraFormChangeItem extends BaseItem {
 						player.addEffect(new MobEffectInstance(EffectCore.FORM_LOCK, 20, 0, true, false));
 					}
 					if (RESET_FORM) UltraRiserItem.reset_Form_Item(player.getItemBySlot(EquipmentSlot.FEET));
-					if (RESET_FORM_MAIN & Objects.equals(belt.Rider, RANGER_NAME))
+					if (RESET_FORM_MAIN & Objects.equals(belt.ultraName, RANGER_NAME))
 						UltraRiserItem.reset_Form_Item(player.getItemBySlot(EquipmentSlot.FEET));
 					if (alsoChange1stSlot != null)
 						UltraRiserItem.set_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), alsoChange1stSlot, 1);
@@ -495,7 +502,11 @@ public class UltraFormChangeItem extends BaseItem {
 						entity.getZ(), 1, 0, 0, 0, 1);
 			}
 		}
+	public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 	}
+	}
+
+
 
 
 /**

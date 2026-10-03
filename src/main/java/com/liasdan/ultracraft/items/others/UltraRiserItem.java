@@ -2,6 +2,8 @@ package com.liasdan.ultracraft.items.others;
 
 import com.google.common.collect.Lists;
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.client.renderer.armor.render_layer.render_layer_info.RenderLayerInfo;
+import com.liasdan.ultracraft.world.attribute.UCAttributes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,17 +20,21 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.cache.texture.AutoGlowingTexture;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 public class UltraRiserItem extends UltraArmorItem {
 
 	public String armorNamePrefix;
 	public UltraFormChangeItem Base_Form_Item;
+	public String ultraName;
 	private ArrayList<UltraFormChangeItem> Extra_Base_Form_Item;
-	public String Rider;
 	public Item HEAD;
 	public Item TORSO;
 	public Item LEGS; 
@@ -46,7 +52,7 @@ public class UltraRiserItem extends UltraArmorItem {
 	{
 		super(material, ArmorItem.Type.BOOTS, properties);
 
-		Rider=rider;
+		ultraName=rider;
 		Base_Form_Item=((UltraFormChangeItem)baseFormItem.get());
 		HEAD=head.get();
 		TORSO=torso.get(); 
@@ -59,6 +65,12 @@ public class UltraRiserItem extends UltraArmorItem {
 				&&player.getItemBySlot(EquipmentSlot.CHEST).getItem()==TORSO.asItem()
 				&&player.getItemBySlot(EquipmentSlot.LEGS).getItem()==LEGS.asItem()
 				&&player.getItemBySlot(EquipmentSlot.FEET).getItem()==this;
+	}
+
+	public static boolean isTransforming(LivingEntity rider) {
+		if (!(rider.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof UltraRiserItem))
+			return false;
+		return Objects.requireNonNull(rider.getAttribute(UCAttributes.IS_TRANSFORMING)).getBaseValue() != 0;
 	}
 
 	public static double getRenderType(ItemStack stack) {
@@ -169,15 +181,66 @@ public class UltraRiserItem extends UltraArmorItem {
 		return "blank";
 	}
 
+	public String getUnlimitedBeltTextures(ItemStack itemStack, LivingEntity rider, String riderName, int num) {
+		return "blank";
+	}
+
 	public ResourceLocation getModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		if (get_Form_Item(itemstack, 1).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying){
-			return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel(this.Rider));
+			return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_FlyingModel(this.ultraName));
 		}
-		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model(this.Rider));
+		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model(this.ultraName));
 	}
 	
 	public ResourceLocation getBeltModelResource(ItemStack itemstack, UltraArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
 		return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, get_Form_Item(itemstack, 1).get_Belt_Model());
+	}
+
+	public void setCustomAnimations(UltraArmorItem an, long instanceId, AnimationState<UltraArmorItem> state) {
+
+	}
+
+	public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+
+		//if(slot==EquipmentSlot.HEAD&isTransformed(rider))layerInfo.add(new RenderLayerInfo("ferbus", "ferbus"));
+		double henshin_tick = getHenshinTick(itemStack, rider);
+		for (int n = 0; n < Num_Base_Form_Item; n++) {
+			UltraFormChangeItem form = get_Form_Item(rider.getItemBySlot(EquipmentSlot.FEET), n + 1);
+			form.SetUnlimitedModels(layerInfo, itemStack, rider, slot);
+		}
+
+		if (slot == EquipmentSlot.FEET) {
+			String texture = GET_TEXT(itemStack, EquipmentSlot.FEET, rider, ultraName);
+			ResourceLocation location = ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "textures/armor/" + texture + ".png");
+			if (this.getGlowForSlot(itemStack, EquipmentSlot.FEET, rider)) {
+				if (ModList.get().isLoaded("iris"))
+					layerInfo.add(new RenderLayerInfo(AutoGlowingTexture.getRenderType(location), null));
+				else layerInfo.add(new RenderLayerInfo(texture, null, texture + "_glowmask"));
+			}
+
+			if (Unlimited_Belt_Textures != 0) {
+				for (int n = 0; n < Unlimited_Belt_Textures; n++) {
+					layerInfo.add(new RenderLayerInfo("belts/" + getUnlimitedBeltTextures(itemStack, rider, this.ultraName, n + 1), null));
+				}
+			}
+		} else if (Unlimited_Textures != 0 & slot == EquipmentSlot.HEAD & isTransformed(rider)) {
+			for (int n = 0; n < Unlimited_Textures; n++) {
+				layerInfo.add(new RenderLayerInfo(getUnlimitedTextures(itemStack, rider, this.ultraName, n + 1), null));
+			}
+		}
+
+
+	}
+
+	public double getHenshinTick(ItemStack itemStack, LivingEntity rider) {
+		double transformingTick = Objects.requireNonNull(rider.getAttribute(UCAttributes.IS_TRANSFORMING)).getBaseValue();
+		if (itemStack.has(DataComponents.CUSTOM_DATA)) {
+			CompoundTag tag = Objects.requireNonNull(itemStack.get(DataComponents.CUSTOM_DATA)).getUnsafe();
+			if (tag.getBoolean("Update_form")) {
+				transformingTick = get_Form_Item(itemStack, 1).getHenshinTick();
+			}
+		}
+		return transformingTick;
 	}
 
 	public static void reset_Form_Item(ItemStack  itemstack)

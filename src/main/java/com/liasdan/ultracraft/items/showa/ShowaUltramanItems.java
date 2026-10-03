@@ -4,9 +4,11 @@ import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
+import com.liasdan.ultracraft.items.others.BaseSwordItem;
 import com.liasdan.ultracraft.items.others.UltraArmorItem;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
 import com.liasdan.ultracraft.items.others.UltraRiserItem;
+import com.liasdan.ultracraft.items.showa.seven.UltraEyeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -40,7 +42,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/seven.geo.json").AddToTabList(UltraTabs.ULTRAMAN));
 	public static final DeferredItem<Item> SEVEN_X_ENERGY = ITEMS.register("seven_x_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"_x","ultra_seven","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
@@ -225,7 +227,7 @@ public class ShowaUltramanItems {
 			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zoffy",ZOFFY_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> ULTRA_EYE = ITEMS.register("ultra_eye",
-			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultra_seven",SEVEN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+			() -> new UltraEyeItem(ArmorMaterials.DIAMOND,"ultra_seven",SEVEN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static final DeferredItem<Item> COLOR_TIMER_JACK = ITEMS.register("color_timer_jack",
 			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"jack",JACK_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
@@ -272,6 +274,9 @@ public class ShowaUltramanItems {
 			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"powered",POWERED_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 	public static final DeferredItem<Item> PIKARI_BRUSH = ITEMS.register("pikari_brush",
 			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"zearth",ZEARTH_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+
+	public static final DeferredItem<SwordItem> EYE_SLUGGER = ITEMS.register("eye_slugger",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

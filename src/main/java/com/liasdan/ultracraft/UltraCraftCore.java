@@ -2,7 +2,7 @@ package com.liasdan.ultracraft;
 
 import com.liasdan.ultracraft.attachments.AttachmentTypes;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
-import com.liasdan.ultracraft.client.renderer.BasicEntityRenderer;
+import com.liasdan.ultracraft.client.renderer.entity.BasicEntityRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
@@ -12,6 +12,7 @@ import com.liasdan.ultracraft.items.*;
 import com.liasdan.ultracraft.items.heisei.*;
 import com.liasdan.ultracraft.items.others.*;
 import com.liasdan.ultracraft.items.showa.ShowaUltramanItems;
+import com.liasdan.ultracraft.world.attribute.UCAttributes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.core.component.DataComponents;
@@ -57,12 +58,12 @@ public class UltraCraftCore {
 
 	public static List<Item> CHANGE_CHANGER_TEXTURE= new ArrayList<Item>();
 
-	public UltraCraftCore(IEventBus modEventBus, ModContainer modContainer) {
+	public UltraCraftCore(ModContainer modContainer, IEventBus modEventBus, Dist dist) {
+		UCAttributes.REGISTRY.register(modEventBus);
 		// Register the commonSetup method for modloading
-		modEventBus.addListener(this::commonSetup);
+
 		NeoForge.EVENT_BUS.register(new ModClientEvents.ClientEvents());
 		NeoForge.EVENT_BUS.register(new ModCommonEvents.CommonEvents());
-		NeoForge.EVENT_BUS.register(new ModCommonEvents.EventHandler());
 
 		// Register ourselves for server and other game events we are interested in.
 		// Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -185,6 +186,7 @@ public class UltraCraftCore {
 	// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 	@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientModEvents {
+
 		@SubscribeEvent
 		public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 			event.registerEntityRenderer(MobsCore.ZETTON.get(), BasicEntityRenderer::new);
@@ -192,6 +194,7 @@ public class UltraCraftCore {
 			event.registerEntityRenderer(MobsCore.BALTAN.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.ALIEN_MAGMA.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.SHADOW.get(), BasicEntityRenderer::new);
+
 			event.registerEntityRenderer(MobsCore.DARRAMB.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.HUDRA.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.TIGA_DARK.get(), BasicEntityRenderer::new);

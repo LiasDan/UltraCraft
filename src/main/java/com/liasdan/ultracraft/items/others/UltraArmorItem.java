@@ -1,7 +1,7 @@
 package com.liasdan.ultracraft.items.others;
 
 import com.liasdan.ultracraft.items.OtherItems;
-import com.liasdan.ultracraft.items.client.UltraArmorRenderer;
+import com.liasdan.ultracraft.client.renderer.armor.UltraArmorRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.core.Holder;
@@ -49,7 +49,7 @@ public class UltraArmorItem extends ArmorItem implements GeoItem {
 			@Override
 			public <T extends LivingEntity> HumanoidModel<?> getGeoArmorRenderer(@Nullable T livingEntity, ItemStack itemStack, @Nullable EquipmentSlot equipmentSlot, @Nullable HumanoidModel<T> original) {
 				if(this.renderer == null)
-					this.renderer = new UltraArmorRenderer(livingEntity, equipmentSlot);
+					this.renderer = new UltraArmorRenderer(equipmentSlot);
 				final Minecraft mc = Minecraft.getInstance();
 				this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original, mc.renderBuffers().bufferSource(), mc.getTimer().getGameTimeDeltaPartialTick(true), 0, 0, 0, 0);
 

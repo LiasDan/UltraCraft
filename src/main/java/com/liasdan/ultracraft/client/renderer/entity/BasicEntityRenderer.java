@@ -1,4 +1,4 @@
-package com.liasdan.ultracraft.client.renderer;
+package com.liasdan.ultracraft.client.renderer.entity;
 
 import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.client.models.BasicMobModel;

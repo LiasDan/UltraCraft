@@ -1,0 +1,249 @@
+package com.liasdan.ultracraft.world.attribute;
+
+import com.liasdan.ultracraft.UltraCraftCore;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.RangedAttribute;
+import net.neoforged.bus.api.Event;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.IModBusEvent;
+import net.neoforged.neoforge.common.BooleanAttribute;
+import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+@EventBusSubscriber(modid = UltraCraftCore.MODID, bus =  EventBusSubscriber.Bus.MOD)
+
+public class UCAttributes extends Event implements IModBusEvent {
+    public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, UltraCraftCore.MODID);
+
+    public static final DeferredHolder<Attribute, Attribute> TOJIMA = REGISTRY.register("tojima",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.tojima",
+                    0,
+                    0,
+                    100
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> WIND = REGISTRY.register("wind",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.wind",
+                    false
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> MUTEKI = REGISTRY.register("muteki",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.muteki",
+                    false
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> WINGS_OUT = REGISTRY.register("wing_out",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.wings_out",
+                    false
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> POSE_MODEL_MODIFIER = REGISTRY.register("pose_model_modifier",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.pose_model_modifier",
+                    false
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> CHANGE_KICK_MODEL = REGISTRY.register("change_kick_model",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.change_kick_model",
+                    false
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> CAPE_ROT_OLD = REGISTRY.register("cape_rotation_old",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.cape_rotation_old",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> CAPE_ROT = REGISTRY.register("cape_rotation",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.cape_rotation",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> WHEEL_ROT_OLD = REGISTRY.register("wheel_rotation_old",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.wheel_rotation_old",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> WHEEL_ROT = REGISTRY.register("wheel_rotation",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.wheel_rotation",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> BALL_ROT_OLD = REGISTRY.register("ball_rotation_old",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.cape_rotation_old",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> BALL_ROT = REGISTRY.register("ball_rotation",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.ball_rotation",
+                    0,
+                    -30,
+                    30
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> IS_TRANSFORMING = REGISTRY.register("is_transforming",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.is_transforming",
+                    0,
+                    0,
+                    30
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> REINFORCEMENT_CHANCE = REGISTRY.register("reinforcement_chance",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.reinforcement_chance",
+                    0,
+                    0,
+                    100
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> CLIMBING = REGISTRY.register("climbing",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.climbing",
+                    0,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> HAS_TIME = REGISTRY.register("has_time",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.has_time",
+                    0,
+                    0,
+                    1
+            ).setSyncable(true)
+    );
+    public static final DeferredHolder<Attribute, Attribute> HAS_BUG = REGISTRY.register("has_bug",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.has_bug",
+                    0,
+                    0,
+                    1
+            ).setSyncable(true)
+    );
+    public static final DeferredHolder<Attribute, Attribute> HAS_CHRISTMAS = REGISTRY.register("has_christmas",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.has_christmas",
+                    0,
+                    0,
+                    1
+            ).setSyncable(true)
+    );
+    public static final DeferredHolder<Attribute, Attribute> HEAD_SIZE = REGISTRY.register("head_size",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.head_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_X = REGISTRY.register("player_size_x",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.player_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_Y = REGISTRY.register("player_size_y",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.player_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> PLAYER_SIZE_Z = REGISTRY.register("player_size_z",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.player_size",
+                    1,
+                    0,
+                    255
+            ).setSyncable(true)
+    );
+
+
+    public static final DeferredHolder<Attribute, Attribute> ABILITY_METER = REGISTRY.register("ability_meter",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore.ability_meter",
+                    0,
+                    0,
+                    300
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> MAX_ABILITY_METER = REGISTRY.register("max_ability_meter",
+            () -> new RangedAttribute(
+                    "attribute.ultracraftcore._max_ability_meter",
+                    300,
+                    0,
+                    1000
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> HELD_ABILITY_KEY_ONE = REGISTRY.register("held_ability_key_one",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.held_ability_key_one",
+                    false
+            ).setSyncable(true)
+    );
+
+    public static final DeferredHolder<Attribute, Attribute> HELD_ABILITY_KEY_TWO = REGISTRY.register("held_ability_key_two",
+            () -> new BooleanAttribute(
+                    "attribute.ultracraftcore.held_ability_key_two",
+                    false
+            ).setSyncable(true)
+    );
+
+    @SubscribeEvent
+    public static void modifyEntityAttributes(EntityAttributeModificationEvent eMod) {
+        eMod.getTypes().forEach(entity ->
+                REGISTRY.getEntries().forEach(attribute -> eMod.add(entity, attribute)));
+    }
+}
