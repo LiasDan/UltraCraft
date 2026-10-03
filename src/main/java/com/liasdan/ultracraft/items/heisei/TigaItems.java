@@ -70,6 +70,9 @@ public class TigaItems {
     public static final DeferredItem<Item> CAMEARRA_ENERGY = ITEMS.register("camearra_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","camearra",""));
 
+    public static final DeferredItem<Item> CORE_OF_GRIEF = ITEMS.register("core_of_grief",
+            () -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.TDG));
+
     public static final DeferredItem<Item> NICE_ENERGY = ITEMS.register("nice_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","nice","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),

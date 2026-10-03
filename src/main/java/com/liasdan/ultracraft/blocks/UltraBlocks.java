@@ -1,6 +1,7 @@
 package com.liasdan.ultracraft.blocks;
 
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -25,6 +26,9 @@ public class UltraBlocks {
 	public static final DeferredBlock<Block> METEOR = registerBlock("meteor",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(UltraTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> CAMEARRA_BOSS_BLOCK = registerBlock("camearra_boss_block",
+			() -> new BossBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(2f), MobsCore.CAMEARRA).AddToTabList(UltraTabs.BLOCKS));
 
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);

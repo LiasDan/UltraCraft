@@ -1,5 +1,6 @@
 package com.liasdan.ultracraft;
 
+import com.liasdan.ultracraft.attachments.AttachmentTypes;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.client.renderer.BasicEntityRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
@@ -101,6 +102,8 @@ public class UltraCraftCore {
 		MobsCore.MOBLIST.register(modEventBus);
 		UltraTabs.register(modEventBus);
 
+		AttachmentTypes.register(modEventBus);
+
 		// Register the item to a creative tab
 		modEventBus.addListener(this::addCreative);
 		modEventBus.addListener(ModCommonEvents::entityAttributeEvent);
@@ -189,6 +192,10 @@ public class UltraCraftCore {
 			event.registerEntityRenderer(MobsCore.BALTAN.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.ALIEN_MAGMA.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.SHADOW.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.DARRAMB.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.HUDRA.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.TIGA_DARK.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.CAMEARRA.get(), BasicEntityRenderer::new);
 		}
 	}
 }

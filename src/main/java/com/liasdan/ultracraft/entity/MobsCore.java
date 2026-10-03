@@ -1,6 +1,8 @@
 package com.liasdan.ultracraft.entity;
 
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.entity.boss.CamearraEntity;
+import com.liasdan.ultracraft.entity.boss.DarkTigaEntity;
 import com.liasdan.ultracraft.entity.footsoldier.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -45,6 +47,30 @@ public class MobsCore {
 
 	public static final DeferredItem<DeferredSpawnEggItem> SHADOW_SPAWN_EGG = ITEMS.register("shadow_spawn_egg",
 			() -> new DeferredSpawnEggItem(SHADOW,0x002368, 0xffdd00, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<DarrambEntity>> DARRAMB = MOBLIST.register("darramb",
+			() -> EntityType.Builder.of(DarrambEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":darramb"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> DARRAMB_SPAWN_EGG = ITEMS.register("darramb_spawn_egg",
+			() -> new DeferredSpawnEggItem(DARRAMB,0x897979, 0xd11945, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<HudraEntity>> HUDRA = MOBLIST.register("hudra",
+			() -> EntityType.Builder.of(HudraEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":hudra"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> HUDRA_SPAWN_EGG = ITEMS.register("hudra_spawn_egg",
+			() -> new DeferredSpawnEggItem(HUDRA,0xd1d1d1, 0x3d32d4, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<DarkTigaEntity>> TIGA_DARK = MOBLIST.register("tiga_dark",
+			() -> EntityType.Builder.of(DarkTigaEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":tiga_dark"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> TIGA_DARK_SPAWN_EGG = ITEMS.register("tiga_dark_spawn_egg",
+			() -> new DeferredSpawnEggItem(TIGA_DARK,0x1f272d, 0xc0ccd6, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<CamearraEntity>> CAMEARRA = MOBLIST.register("camearra",
+			() -> EntityType.Builder.of(CamearraEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":camearra"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> CAMEARRA_SPAWN_EGG = ITEMS.register("camearra_spawn_egg",
+			() -> new DeferredSpawnEggItem(CAMEARRA, 0x919c9d, 0xd9bb7c, new Item.Properties()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

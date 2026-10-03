@@ -132,6 +132,10 @@ public class UltraTabs {
 			event.accept(MobsCore.BALTAN_SPAWN_EGG);
 			event.accept(MobsCore.ALIEN_MAGMA_SPAWN_EGG);
 			event.accept(MobsCore.SHADOW_SPAWN_EGG);
+			event.accept(MobsCore.DARRAMB_SPAWN_EGG);
+			event.accept(MobsCore.HUDRA_SPAWN_EGG);
+			event.accept(MobsCore.TIGA_DARK_SPAWN_EGG);
+			event.accept(MobsCore.CAMEARRA_SPAWN_EGG);
 			
 			for (int i = 0; i < UltraTabs.MISC.size(); i++)
 			{

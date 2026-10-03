@@ -2,6 +2,8 @@ package com.liasdan.ultracraft.events;
 
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
+import com.liasdan.ultracraft.entity.boss.CamearraEntity;
+import com.liasdan.ultracraft.entity.boss.DarkTigaEntity;
 import com.liasdan.ultracraft.entity.footsoldier.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -106,6 +108,10 @@ public class ModCommonEvents {
 		event.put(MobsCore.BALTAN.get(), BaltanEntity.setAttributes().build());
 		event.put(MobsCore.ALIEN_MAGMA.get(), AlienMagmaEntity.setAttributes().build());
 		event.put(MobsCore.SHADOW.get(), ShadowEntity.setAttributes().build());
+		event.put(MobsCore.DARRAMB.get(), DarrambEntity.setAttributes().build());
+		event.put(MobsCore.HUDRA.get(), HudraEntity.setAttributes().build());
+		event.put(MobsCore.TIGA_DARK.get(), DarkTigaEntity.setAttributes().build());
+		event.put(MobsCore.CAMEARRA.get(), CamearraEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent

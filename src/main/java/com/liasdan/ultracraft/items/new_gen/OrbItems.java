@@ -1,4 +1,4 @@
-package com.liasdan.ultracraft.items.heisei;
+package com.liasdan.ultracraft.items.new_gen;
 
 import com.liasdan.ultracraft.UltraCraftCore;
 import net.neoforged.bus.api.IEventBus;

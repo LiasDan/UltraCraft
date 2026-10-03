@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gaia",
+  "pattern": [
+    "tad",
+    "pgr",
+	"sab"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+	"b": {
+      "item": "ultracraft:tiga_dark_blast_energy"
+    },
+    "d": {
+      "item": "ultracraft:tiga_dark_energy"
+    },
+    "g": {
+      "item": "ultracraft:core_of_grief"
+    },
+    "p": {
+      "item": "ultracraft:tiga_power_type_energy"
+    },
+    "r": {
+      "item": "ultracraft:tiga_dark_tornado_energy"
+    },
+    "s": {
+      "item": "ultracraft:tiga_sky_type_energy"
+    },
+    "t": {
+      "item": "ultracraft:tiga_multi_type_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:camearra_boss_block"
+  }
+}

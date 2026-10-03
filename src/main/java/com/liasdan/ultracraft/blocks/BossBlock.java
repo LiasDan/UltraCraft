@@ -19,35 +19,27 @@ import java.util.Random;
 import java.util.function.Supplier;
 public class BossBlock extends BaseBlock {
 
-	private Component TEXT;
 	private Supplier<? extends EntityType<? extends BaseFootsoldierEntity>> BOSS;
 	private List<Block> BLOCK;
 	private int NUM;
 
 
 
-	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseFootsoldierEntity>> boss,Component text) {
+	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseFootsoldierEntity>> boss) {
 		super(prop);
-		TEXT=text;
 		BOSS =boss;
-
 	}
 
-	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseFootsoldierEntity>> boss,Component text,int nun,Block... block) {
+	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseFootsoldierEntity>> boss,Block... block) {
 		super(prop);
-		TEXT=text;
 		BOSS =boss;
 		BLOCK = Lists.newArrayList(block);
-
 	}
 
 
 
 	@Override
 	public void playerDestroy(Level wolrd, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity p_49831_, ItemStack stack) {
-		player.awardStat(Stats.BLOCK_MINED.get(this));
-		player.causeFoodExhaustion(0.005F);
-		dropResources(state, wolrd, pos, p_49831_, player, stack);
 		if (BLOCK!=null) {
 			if(NUM==1) {
 				for (int n = 0; n < 40; n++)
@@ -75,10 +67,8 @@ public class BossBlock extends BaseBlock {
 		if (boss != null) {
 			boss.moveTo(pos.getX(), pos.getY(), pos.getZ(), 0, 0.0F);
 			wolrd.addFreshEntity(boss);
-			player.sendSystemMessage(TEXT);
-
 		}
-
+		super.playerDestroy(wolrd, player, pos, state, p_49831_, stack);
 	}
 
 }
