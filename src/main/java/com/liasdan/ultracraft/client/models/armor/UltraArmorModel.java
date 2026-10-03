@@ -46,7 +46,7 @@ public class UltraArmorModel<T extends UltraArmorItem> extends GeoModel<T> {
 
     @Override
     public ResourceLocation getModelResource(T animatable) {
-        return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/armor/default.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/ultra.geo.json");
     }
     
     @Override

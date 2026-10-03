@@ -1,6 +1,7 @@
 package com.liasdan.ultracraft.items.showa;
 
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.client.renderer.armor.render_layer.render_layer_info.RenderLayerInfo;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
@@ -11,10 +12,14 @@ import com.liasdan.ultracraft.items.others.UltraRiserItem;
 import com.liasdan.ultracraft.items.showa.seven.UltraEyeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ShowaUltramanItems {
 
@@ -26,7 +31,15 @@ public class ShowaUltramanItems {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultraman_red_color_timer",null));
+						else layerInfo.add(new RenderLayerInfo("ultraman_dark_color_timer",null));
+					}
+				}
+			}.AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> ZOFFY_ENERGY = ITEMS.register("zoffy_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","zoffy","",
@@ -34,7 +47,15 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultraman_red_color_timer",null));
+						else layerInfo.add(new RenderLayerInfo("ultraman_dark_color_timer",null));
+					}
+				}
+			}.AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> SEVEN_ENERGY = ITEMS.register("seven_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","ultra_seven","",
@@ -42,7 +63,15 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/seven.geo.json").AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultra_seven_dark_beam_lamp","seven"));
+						else layerInfo.add(new RenderLayerInfo("ultra_seven","seven"));
+					}
+				}
+			}.ChangeModel("geo/seven.geo.json").AddToTabList(UltraTabs.ULTRAMAN));
 	public static final DeferredItem<Item> SEVEN_X_ENERGY = ITEMS.register("seven_x_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"_x","ultra_seven","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),

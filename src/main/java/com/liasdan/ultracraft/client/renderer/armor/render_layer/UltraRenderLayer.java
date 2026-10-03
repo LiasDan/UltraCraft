@@ -62,8 +62,8 @@ public class UltraRenderLayer<T extends UltraArmorItem> extends GeoRenderLayer<T
             @Override
             public ResourceLocation getModelResource(UltraArmorItem animatable) {
                 if (slot == EquipmentSlot.FEET)
-                    return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/belts/" + name + ".geo.json");
-                return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/armor/" + name + ".geo.json");
+                    return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/" + name + ".geo.json");
+                return ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID, "geo/" + name + ".geo.json");
             }
         };
     }
