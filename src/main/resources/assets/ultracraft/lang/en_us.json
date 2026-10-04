@@ -33,18 +33,29 @@
   "entity.ultracraft.baltan": "Baltan",
   "entity.ultracraft.alien_magma": "Alien Magma",
   "entity.ultracraft.shadow": "Ultraman Shadow",
+  "entity.ultracraft.darramb": "Darramb",
+  "entity.ultracraft.hudra": "Hudra",
+  "entity.ultracraft.tiga_dark": "Tiga Dark",
+  "entity.ultracraft.camearra": "Camearra",
 
   "item.ultracraft.zetton_spawn_egg": "Zetton Spawn Egg",
   "item.ultracraft.yapool_spawn_egg": "Yapool Spawn Egg",
   "item.ultracraft.baltan_spawn_egg": "Baltan Spawn Egg",
   "item.ultracraft.alien_magma_spawn_egg": "Alien Magma Spawn Egg",
   "item.ultracraft.shadow_spawn_egg": "Ultraman Shadow Spawn Egg",
+  "item.ultracraft.darramb_spawn_egg": "Darramb Spawn Egg",
+  "item.ultracraft.hudra_spawn_egg": "Hudra Spawn Egg",
+  "item.ultracraft.tiga_dark_spawn_egg": "Tiga Dark Spawn Egg",
+  "item.ultracraft.camearra_spawn_egg": "Camearra Spawn Egg",
+
+  "block.ultracraft.camearra_boss_block": "Camearra Boss Block",
 
   //Ultraman
   "tab.ultracraft.ultraman": "Showa Ultraman",
 
   "item.ultracraft.land_of_light_fragment": "Land of Light Fragment",
   "block.ultracraft.meteor": "Meteor Block",
+  "item.ultracraft.mantle_brooch": "Ultra Mantle Brooch",
 
   "item.ultracraft.ultraman_head": "Ultraman Helmet",
   "item.ultracraft.ultraman_torso": "Ultraman Chestplate",
@@ -57,6 +68,8 @@
 
   "ultracraft:ultraman_energy.form": "Ultra: Ultraman",
   "ultracraft:zoffy_energy.form": "Ultra: Zoffy",
+  "ultracraft:mantle_brooch.form": "Ultra: Ultraman",
+  "ultracraft:mantle_brooch_zoffy.form": "Ultra: Zoffy",
 
   "item.ultracraft.ultra_eye": "Ultra Eye",
   "item.ultracraft.seven_energy": "UltraSeven Energy",
@@ -64,11 +77,15 @@
 
   "ultracraft:seven_energy.form": "Ultra: UltraSeven",
   "ultracraft:seven_x_energy.form": "Ultra: UltraSeven X",
+  "ultracraft:mantle_brooch_seven.form": "Ultra: UltraSeven",
+
+  "item.ultracraft.eye_slugger": "Eye Slugger",
 
   "item.ultracraft.color_timer_jack": "Color Timer",
   "item.ultracraft.jack_energy": "Ultraman Jack Energy",
 
   "ultracraft:jack_energy.form": "Ultra: Ultraman Jack",
+  "ultracraft:mantle_brooch_jack.form": "Ultra: Ultraman Jack",
 
   "item.ultracraft.ultra_rings": "Ultra Rings",
   "item.ultracraft.color_timer_father": "Color Timer",
@@ -77,6 +94,8 @@
 
   "ultracraft:ace_energy.form": "Ultra: Ultraman Ace",
   "ultracraft:father_energy.form": "Ultra: Father of Ultra",
+  "ultracraft:mantle_brooch_ace.form": "Ultra: Ultraman Ace",
+  "ultracraft:mantle_brooch_father.form": "Ultra: Father of Ultra",
 
   "item.ultracraft.ultra_badge": "Ultra Badge",
   "item.ultracraft.color_timer_mother": "Color Timer",
@@ -85,6 +104,8 @@
 
   "ultracraft:taro_energy.form": "Ultra: Ultraman Taro",
   "ultracraft:mother_energy.form": "Ultra: Mother of Ultra",
+  "ultracraft:mantle_brooch_taro.form": "Ultra: Ultraman Taro",
+  "ultracraft:mantle_brooch_mother.form": "Ultra: Mother of Ultra",
 
   "item.ultracraft.leo_ring": "Leo Ring",
   "item.ultracraft.color_timer_astra": "Color Timer",
@@ -152,6 +173,7 @@
   "item.ultracraft.tiga_dark_energy": "Ultraman Tiga Dark Energy",
   "item.ultracraft.tiga_dark_tornado_energy": "Ultraman Tiga Dark (Tornado Type) Energy",
   "item.ultracraft.tiga_dark_blast_energy": "Ultraman Tiga Dark (Blast Type) Energy",
+  "item.ultracraft.glitter_tiga_energy": "Glitter Tiga Energy",
 
   "ultracraft:tiga_multi_type_energy.form": "Ultra: Ultraman Tiga §eMulti Type",
   "ultracraft:tiga_power_type_energy.form": "Ultra: Ultraman Tiga §cPower Type",
@@ -159,6 +181,9 @@
   "ultracraft:tiga_dark_energy.form": "Ultra: Ultraman Tiga Dark",
   "ultracraft:tiga_dark_tornado_energy.form": "Ultra: Ultraman Tiga Dark §cTornado Type",
   "ultracraft:tiga_dark_blast_energy.form": "Ultra: Ultraman Tiga Dark §9Blast Type",
+  "ultracraft:glitter_tiga_energy.form": "Ultra: §6Glitter Tiga",
+
+  "item.ultracraft.core_of_grief": "Core of Grief",
 
   "ultracraft:camearra_energy.form": "Giant of Darkness: Camearra",
 

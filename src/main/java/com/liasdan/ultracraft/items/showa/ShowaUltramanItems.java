@@ -35,8 +35,8 @@ public class ShowaUltramanItems {
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
-						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultraman_red_color_timer",null));
-						else layerInfo.add(new RenderLayerInfo("ultraman_dark_color_timer",null));
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("red_color_timer",null));
+						else layerInfo.add(new RenderLayerInfo("dark_color_timer",null));
 					}
 				}
 			}.AddToTabList(UltraTabs.ULTRAMAN));
@@ -51,8 +51,8 @@ public class ShowaUltramanItems {
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
-						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultraman_red_color_timer",null));
-						else layerInfo.add(new RenderLayerInfo("ultraman_dark_color_timer",null));
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("red_color_timer",null));
+						else layerInfo.add(new RenderLayerInfo("dark_color_timer",null));
 					}
 				}
 			}.AddToTabList(UltraTabs.ULTRAMAN));
@@ -68,7 +68,6 @@ public class ShowaUltramanItems {
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
 						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultra_seven_dark_beam_lamp","seven"));
-						else layerInfo.add(new RenderLayerInfo("ultra_seven","seven"));
 					}
 				}
 			}.ChangeModel("geo/seven.geo.json").AddToTabList(UltraTabs.ULTRAMAN));
@@ -86,7 +85,15 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("red_color_timer",null));
+						else layerInfo.add(new RenderLayerInfo("dark_color_timer",null));
+					}
+				}
+			}.AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> ACE_ENERGY = ITEMS.register("ace_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","ace","",
@@ -121,13 +128,18 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> LEO_MANTLE = ITEMS.register("leo_mantle",
-			() -> new UltraFormChangeItem(new Item.Properties(),0,"_mantle","leo","",
+			() -> new UltraFormChangeItem(new Item.Properties(),0,"","leo","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json"));
-
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD)
+						layerInfo.add(new RenderLayerInfo("leo_mantle", "ultracape"));
+				}
+			});
 	public static final DeferredItem<Item> LEO_ENERGY = ITEMS.register("leo_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","leo","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
@@ -152,7 +164,6 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).ChangeModel("geo/ultracape.geo.json"));
-
 	public static final DeferredItem<Item> KING_ENERGY = ITEMS.register("king_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","king","king_buckle",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),

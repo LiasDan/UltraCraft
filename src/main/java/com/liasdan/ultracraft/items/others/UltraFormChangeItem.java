@@ -477,18 +477,17 @@ public class UltraFormChangeItem extends BaseItem {
 					if (SWITCH_ITEM != null & UltraRiserItem.get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), SLOT) == this)
 						UltraRiserItem.set_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), SWITCH_ITEM, SLOT);
 					else UltraRiserItem.set_Form_Item(player.getItemBySlot(EquipmentSlot.FEET), this, SLOT);
-					if (!alternative.isEmpty()) {
 
-						for (UltraFormChangeItem alternativeItem_form_change : alternative) {
-							alternativeItem_form_change.use(level, player, usedHand);
-						}
+				} else if (!alternative.isEmpty()) {
+
+					for (UltraFormChangeItem alternativeItem_form_change : alternative) {
+						alternativeItem_form_change.use(level, player, usedHand);
 					}
 				}
 			}
 		}
-			return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
-
-		}
+		return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+	}
 
 
 		public void OnTransformation (ItemStack itemstack, LivingEntity entity){

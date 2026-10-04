@@ -1,18 +1,26 @@
 package com.liasdan.ultracraft.items.heisei;
 
 import com.liasdan.ultracraft.UltraCraftCore;
+import com.liasdan.ultracraft.client.renderer.armor.render_layer.render_layer_info.RenderLayerInfo;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.items.OtherItems;
 import com.liasdan.ultracraft.items.UltraTabs;
 import com.liasdan.ultracraft.items.others.UltraFormChangeItem;
 import com.liasdan.ultracraft.items.others.UltraRiserItem;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class CosmosItems {
 
@@ -40,12 +48,19 @@ public class CosmosItems {
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_MIRACLUNA_ENERGY = ITEMS.register("cosmos_miracluna_energy",
-            () -> new UltraFormChangeItem(new Item.Properties(),0,"_miracluna","cosmos","",
+            () -> new UltraFormChangeItem(new Item.Properties(),0,"_luna","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+            {
+                public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+                    RenderType glitter = RenderType.breezeEyes(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/armor/glitter.png"));
+                    if (slot == EquipmentSlot.HEAD)
+                        layerInfo.add(new RenderLayerInfo(glitter, null));
+                }
+            }.AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_SPACE_CORONA_ENERGY = ITEMS.register("cosmos_space_corona_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_space_corona","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
