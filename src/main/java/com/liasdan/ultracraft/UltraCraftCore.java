@@ -2,6 +2,7 @@ package com.liasdan.ultracraft;
 
 import com.liasdan.ultracraft.attachments.AttachmentTypes;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
+import com.liasdan.ultracraft.blocks.entity.ModBlockEntities;
 import com.liasdan.ultracraft.client.renderer.entity.BasicEntityRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
@@ -98,6 +99,7 @@ public class UltraCraftCore {
 		//TeoItems.register(modEventBus);
 
 		UltraBlocks.register(modEventBus);
+		ModBlockEntities.register(modEventBus);
 
 		MobsCore.register(modEventBus);
 		MobsCore.MOBLIST.register(modEventBus);

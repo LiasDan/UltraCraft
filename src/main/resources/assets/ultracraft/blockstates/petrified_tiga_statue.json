@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ultracraft:block/petrified_tiga_statue" },
+    "facing=south": { "model": "ultracraft:block/petrified_tiga_statue", "y": 180 },
+    "facing=west":  { "model": "ultracraft:block/petrified_tiga_statue", "y": 270 },
+    "facing=east":  { "model": "ultracraft:block/petrified_tiga_statue", "y": 90 }
+  }
+}

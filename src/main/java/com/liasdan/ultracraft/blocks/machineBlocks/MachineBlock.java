@@ -1,4 +1,4 @@
-package com.liasdan.ultracraft.blocks;
+package com.liasdan.ultracraft.blocks.machineBlocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

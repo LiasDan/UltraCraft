@@ -36,6 +36,15 @@
           "name": "ultracraft:land_of_light_fragment"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:petrified_tiga_statue"
+        }
+      ]
     }
   ]
 }
