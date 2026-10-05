@@ -37,6 +37,14 @@ public class UltraBlocks {
 			() -> new CosmicRefiner(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.COW_BELL)
 					.strength(5.0F,6.0F).sound(SoundType.METAL)).AddToTabList(UltraTabs.BLOCKS));
 
+	public static final DeferredBlock<Block> SKY_ALTAR = registerBlock("sky_altar",
+			() -> new SkyAltar(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.COW_BELL)
+					.strength(5.0F,6.0F).dynamicShape(),Block.box(3.5,0,3.5, 12.5,7,12.5)).AddToTabList(UltraTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> OCEAN_ALTAR = registerBlock("ocean_altar",
+			() -> new OceanAltar(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.COW_BELL)
+					.strength(5.0F,6.0F),Block.box(3.5,0,3.5, 12.5,7,12.5)).AddToTabList(UltraTabs.BLOCKS));
+
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);
 		registerBlockItem(name, toReturn);

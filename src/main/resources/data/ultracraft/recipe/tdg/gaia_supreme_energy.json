@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "gaia",
+  "ingredients": [
+    {
+      "item": "ultracraft:gaia_v2_energy"
+    },
+    {
+      "item": "ultracraft:agul_v2_energy"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:gaia_supreme_energy"
+  }
+}

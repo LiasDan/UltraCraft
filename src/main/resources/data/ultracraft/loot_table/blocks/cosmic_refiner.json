@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:cosmic_refiner"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "ultracraft:blocks/cosmic_refiner"
+}

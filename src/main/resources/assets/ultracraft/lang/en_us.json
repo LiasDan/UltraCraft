@@ -201,6 +201,9 @@
   "ultracraft:dyna_strong_type_energy.form": "Ultra: Ultraman Dyna §cStrong Type",
   "ultracraft:dyna_miracle_type_energy.form": "Ultra: Ultraman Dyna §9Miracle Type",
 
+  "block.ultracraft.sky_altar": "Gaia Altar",
+  "block.ultracraft.ocean_altar": "Agul Altar",
+
   "item.ultracraft.photoelectron_tube": "Photoelectron Tube",
   "item.ultracraft.esplender": "Esplender",
   "item.ultracraft.agulater": "Agulater",

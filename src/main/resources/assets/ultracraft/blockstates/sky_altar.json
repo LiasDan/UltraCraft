@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "facing=north": { "model": "ultracraft:block/sky_altar" },
+    "facing=south": { "model": "ultracraft:block/sky_altar", "y": 180 },
+    "facing=west": { "model": "ultracraft:block/sky_altar", "y": 270 },
+    "facing=east": { "model": "ultracraft:block/sky_altar", "y": 90 }
+  }
+}
