@@ -1,0 +1,8 @@
+{
+    "variants":{   
+    "facing=north": { "model": "ultracraft:block/cosmic_refiner" },
+    "facing=south": { "model": "ultracraft:block/cosmic_refiner", "y": 180 },
+    "facing=west": { "model": "ultracraft:block/cosmic_refiner", "y": 270 },
+    "facing=east": { "model": "ultracraft:block/cosmic_refiner", "y": 90 }
+  }
+ }

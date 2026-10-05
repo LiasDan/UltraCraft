@@ -96,14 +96,6 @@ public class TigaItems {
     public static final DeferredItem<Item> CORE_OF_GRIEF = ITEMS.register("core_of_grief",
             () -> new BaseItem(new Item.Properties()).AddToTabList(UltraTabs.TDG));
 
-    public static final DeferredItem<Item> NICE_ENERGY = ITEMS.register("nice_energy",
-            () -> new UltraFormChangeItem(new Item.Properties(),0,"","nice","",
-                    new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-                    new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
-                    new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.TDG));
-
     public static final DeferredItem<Item> TIGA_SPARKLENCE = ITEMS.register("tiga_sparklence",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"tiga",TIGA_MULTI_TYPE_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
@@ -112,9 +104,6 @@ public class TigaItems {
 
     public static final DeferredItem<Item> CAMEARRA_SPARKLENCE = ITEMS.register("camearra_sparklence",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"camearra",CAMEARRA_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
-
-    public static final DeferredItem<Item> NICE_DREAMER = ITEMS.register("nice_dreamer",
-            () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"nice",NICE_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

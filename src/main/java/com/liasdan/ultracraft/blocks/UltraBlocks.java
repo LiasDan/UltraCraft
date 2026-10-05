@@ -1,10 +1,9 @@
 package com.liasdan.ultracraft.blocks;
 
 import com.liasdan.ultracraft.UltraCraftCore;
-import com.liasdan.ultracraft.blocks.machineBlocks.TigaStatue;
+import com.liasdan.ultracraft.blocks.machineBlocks.*;
 import com.liasdan.ultracraft.entity.MobsCore;
-import com.liasdan.ultracraft.items.OtherItems;
-import com.liasdan.ultracraft.items.UltraTabs;
+import com.liasdan.ultracraft.items.*;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -33,6 +32,10 @@ public class UltraBlocks {
 
 	public static final DeferredBlock<Block> CAMEARRA_BOSS_BLOCK = registerBlock("camearra_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(2f), MobsCore.CAMEARRA).AddToTabList(UltraTabs.BLOCKS));
+
+	public static final DeferredBlock<Block> COSMIC_REFINER = registerBlock("cosmic_refiner",
+			() -> new CosmicRefiner(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.COW_BELL)
+					.strength(5.0F,6.0F).sound(SoundType.METAL)).AddToTabList(UltraTabs.BLOCKS));
 
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);

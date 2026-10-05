@@ -160,6 +160,17 @@ public class OtherItems {
 				}
 			}.addAlternative(MANTLE_BROOCH_ZOFFY.get()).AddToTabList(UltraTabs.MISC));
 
+	public static final DeferredItem<Item> NICE_ENERGY = ITEMS.register("nice_energy",
+			() -> new UltraFormChangeItem(new Item.Properties(),0,"","nice","",
+					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.TDG));
+
+	public static final DeferredItem<Item> NICE_DREAMER = ITEMS.register("nice_dreamer",
+			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"nice",NICE_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
