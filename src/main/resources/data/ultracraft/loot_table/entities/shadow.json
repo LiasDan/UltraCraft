@@ -22,6 +22,14 @@
         },
         {
           "type": "minecraft:item",
+          "name": "ultracraft:neos_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:ultraseven_21_energy"
+        },
+        {
+          "type": "minecraft:item",
           "name": "ultracraft:land_of_light_fragment",
           "functions": [
             {
