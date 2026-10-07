@@ -122,6 +122,7 @@ public class ModCommonEvents {
 		event.put(MobsCore.CAMEARRA.get(), CamearraEntity.setAttributes().build());
 		event.put(MobsCore.IBLIS.get(), IblisEntity.setAttributes().build());
 		event.put(MobsCore.CHAOS_ULTRAMAN.get(), ChaosUltramanEntity.setAttributes().build());
+		event.put(MobsCore.DARK_ZAGI.get(), DarkZagiEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent

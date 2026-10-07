@@ -39,6 +39,7 @@
   "entity.ultracraft.camearra": "Camearra",
   "entity.ultracraft.iblis": "Chaos Header Iblis",
   "entity.ultracraft.chaos_ultraman": "Chaos Ultraman",
+  "entity.ultracraft.dark_zagi": "Dark Zagi",
 
   "item.ultracraft.zetton_spawn_egg": "Zetton Spawn Egg",
   "item.ultracraft.yapool_spawn_egg": "Yapool Spawn Egg",
@@ -51,6 +52,7 @@
   "item.ultracraft.camearra_spawn_egg": "Camearra Spawn Egg",
   "item.ultracraft.iblis_spawn_egg": "Chaos Header Iblis Spawn Egg",
   "item.ultracraft.chaos_ultraman_spawn_egg": "Chaos Ultraman Spawn Egg",
+  "item.ultracraft.dark_zagi_spawn_egg": "Dark Zagi Spawn Egg",
 
   "block.ultracraft.camearra_boss_block": "Camearra Boss Block",
   "block.ultracraft.chaos_ultraman_boss_block": "Chaos Ultraman Boss Block",

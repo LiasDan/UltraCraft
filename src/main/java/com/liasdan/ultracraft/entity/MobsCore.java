@@ -83,6 +83,12 @@ public class MobsCore {
 	public static final DeferredItem<DeferredSpawnEggItem> CHAOS_ULTRAMAN_SPAWN_EGG = ITEMS.register("chaos_ultraman_spawn_egg",
 			() -> new DeferredSpawnEggItem(CHAOS_ULTRAMAN,0x101317, 0xd0021b, new Item.Properties()));
 
+	public static final DeferredHolder<EntityType<?>, EntityType<DarkZagiEntity>> DARK_ZAGI = MOBLIST.register("dark_zagi",
+			() -> EntityType.Builder.of(DarkZagiEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":dark_zagi"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> DARK_ZAGI_SPAWN_EGG = ITEMS.register("dark_zagi_spawn_egg",
+			() -> new DeferredSpawnEggItem(DARK_ZAGI,0x141414, 0x9e0000, new Item.Properties()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

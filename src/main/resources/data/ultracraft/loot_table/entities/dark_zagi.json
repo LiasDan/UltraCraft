@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:nexus_anphans_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:the_next_anphans_energy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultracraft:land_of_light_fragment"
+        }
+      ]
+    }
+  ]
+}

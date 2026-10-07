@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "nexus",
+  "ingredients": [
+    {
+      "item": "ultracraft:nexus_junis_energy"
+    },
+    {
+      "item": "minecraft:bow"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:nexus_junis_blue_energy"
+  }
+}

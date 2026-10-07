@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tiga",
+  "pattern": [
+    "aba",
+    "nax",
+	"jas"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+	"b": {
+      "item": "ultracraft:nexus_junis_blue_energy"
+    },
+    "j": {
+      "item": "ultracraft:nexus_junis_energy"
+    },
+    "n": {
+      "item": "ultracraft:nexus_anphans_energy"
+    },
+    "s": {
+      "item": "ultracraft:the_next_junis_energy"
+    },
+    "x": {
+      "item": "ultracraft:the_next_anphans_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:noa_energy"
+  }
+}

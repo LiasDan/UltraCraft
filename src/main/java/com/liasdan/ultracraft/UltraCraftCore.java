@@ -206,6 +206,8 @@ public class UltraCraftCore {
 
 			event.registerEntityRenderer(MobsCore.IBLIS.get(), IblisRenderer::new);
 			event.registerEntityRenderer(MobsCore.CHAOS_ULTRAMAN.get(), BasicEntityRenderer::new);
+
+			event.registerEntityRenderer(MobsCore.DARK_ZAGI.get(), BasicEntityRenderer::new);
 		}
 	}
 }
