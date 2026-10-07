@@ -1,8 +1,10 @@
 package com.liasdan.ultracraft.events;
 
+import com.liasdan.ultracraft.client.models.entity.IblisModel;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.entity.boss.CamearraEntity;
+import com.liasdan.ultracraft.entity.boss.ChaosUltramanEntity;
 import com.liasdan.ultracraft.entity.boss.DarkTigaEntity;
 import com.liasdan.ultracraft.entity.footsoldier.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -23,6 +25,7 @@ import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -102,6 +105,11 @@ public class ModCommonEvents {
 	}
 
 	@SubscribeEvent
+	public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(IblisModel.LAYER_LOCATION, IblisModel::createBodyLayer);
+	}
+
+	@SubscribeEvent
 	public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
 		event.put(MobsCore.ZETTON.get(), ZettonEntity.setAttributes().build());
 		event.put(MobsCore.YAPOOL.get(), YapoolEntity.setAttributes().build());
@@ -112,6 +120,8 @@ public class ModCommonEvents {
 		event.put(MobsCore.HUDRA.get(), HudraEntity.setAttributes().build());
 		event.put(MobsCore.TIGA_DARK.get(), DarkTigaEntity.setAttributes().build());
 		event.put(MobsCore.CAMEARRA.get(), CamearraEntity.setAttributes().build());
+		event.put(MobsCore.IBLIS.get(), IblisEntity.setAttributes().build());
+		event.put(MobsCore.CHAOS_ULTRAMAN.get(), ChaosUltramanEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent

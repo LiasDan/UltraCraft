@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cosmos",
+  "ingredients": [
+    {
+      "item": "ultracraft:cosmos_miracluna_energy"
+    },
+    {
+      "item": "ultracraft:cosmos_space_corona_energy"
+    },
+    {
+      "item": "ultracraft:cosmos_eclipse_energy"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:cosmos_future_energy"
+  }
+}

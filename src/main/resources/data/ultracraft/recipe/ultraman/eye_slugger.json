@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "tiga",
+  "group": "ultra_seven",
   "pattern": [
     "aaa",
-    "bac",
-	"aaa"
+    "aca",
+	"aba"
   ],
   "key": {
     "a": {
       "item": "ultracraft:land_of_light_fragment"
     },
 	"b": {
-      "item": "ultracraft:cosmos_eclipse_energy"
+      "item": "ultracraft:seven_energy"
     },
     "c": {
-      "item": "ultracraft:justice_energy"
+      "item": "minecraft:iron_sword"
     }
   },
   "result": {
-    "id": "ultracraft:color_timer_legend"
+    "id": "ultracraft:eye_slugger"
   }
 }

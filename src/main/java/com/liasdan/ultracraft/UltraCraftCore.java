@@ -4,6 +4,7 @@ import com.liasdan.ultracraft.attachments.AttachmentTypes;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.blocks.entity.ModBlockEntities;
 import com.liasdan.ultracraft.client.renderer.entity.BasicEntityRenderer;
+import com.liasdan.ultracraft.client.renderer.entity.IblisRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
@@ -109,6 +110,7 @@ public class UltraCraftCore {
 
 		// Register the item to a creative tab
 		modEventBus.addListener(this::addCreative);
+		modEventBus.addListener(ModCommonEvents::registerLayers);
 		modEventBus.addListener(ModCommonEvents::entityAttributeEvent);
 		modEventBus.addListener(ModCommonEvents::entitySpawnRestriction);
 
@@ -201,6 +203,9 @@ public class UltraCraftCore {
 			event.registerEntityRenderer(MobsCore.HUDRA.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.TIGA_DARK.get(), BasicEntityRenderer::new);
 			event.registerEntityRenderer(MobsCore.CAMEARRA.get(), BasicEntityRenderer::new);
+
+			event.registerEntityRenderer(MobsCore.IBLIS.get(), IblisRenderer::new);
+			event.registerEntityRenderer(MobsCore.CHAOS_ULTRAMAN.get(), BasicEntityRenderer::new);
 		}
 	}
 }

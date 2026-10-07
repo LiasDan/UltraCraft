@@ -1,8 +1,7 @@
 package com.liasdan.ultracraft.entity;
 
 import com.liasdan.ultracraft.UltraCraftCore;
-import com.liasdan.ultracraft.entity.boss.CamearraEntity;
-import com.liasdan.ultracraft.entity.boss.DarkTigaEntity;
+import com.liasdan.ultracraft.entity.boss.*;
 import com.liasdan.ultracraft.entity.footsoldier.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -71,6 +70,18 @@ public class MobsCore {
 
 	public static final DeferredItem<DeferredSpawnEggItem> CAMEARRA_SPAWN_EGG = ITEMS.register("camearra_spawn_egg",
 			() -> new DeferredSpawnEggItem(CAMEARRA, 0x919c9d, 0xd9bb7c, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<IblisEntity>> IBLIS = MOBLIST.register("iblis",
+			() -> EntityType.Builder.of(IblisEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":iblis"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> IBLIS_SPAWN_EGG = ITEMS.register("iblis_spawn_egg",
+			() -> new DeferredSpawnEggItem(IBLIS, 0xd0021b, 0x4a4a4a, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<ChaosUltramanEntity>> CHAOS_ULTRAMAN = MOBLIST.register("chaos_ultraman",
+			() -> EntityType.Builder.of(ChaosUltramanEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":chaos_ultraman"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> CHAOS_ULTRAMAN_SPAWN_EGG = ITEMS.register("chaos_ultraman_spawn_egg",
+			() -> new DeferredSpawnEggItem(CHAOS_ULTRAMAN,0x101317, 0xd0021b, new Item.Properties()));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

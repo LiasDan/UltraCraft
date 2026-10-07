@@ -37,6 +37,8 @@
   "entity.ultracraft.hudra": "Hudra",
   "entity.ultracraft.tiga_dark": "Tiga Dark",
   "entity.ultracraft.camearra": "Camearra",
+  "entity.ultracraft.iblis": "Chaos Header Iblis",
+  "entity.ultracraft.chaos_ultraman": "Chaos Ultraman",
 
   "item.ultracraft.zetton_spawn_egg": "Zetton Spawn Egg",
   "item.ultracraft.yapool_spawn_egg": "Yapool Spawn Egg",
@@ -47,8 +49,11 @@
   "item.ultracraft.hudra_spawn_egg": "Hudra Spawn Egg",
   "item.ultracraft.tiga_dark_spawn_egg": "Tiga Dark Spawn Egg",
   "item.ultracraft.camearra_spawn_egg": "Camearra Spawn Egg",
+  "item.ultracraft.iblis_spawn_egg": "Chaos Header Iblis Spawn Egg",
+  "item.ultracraft.chaos_ultraman_spawn_egg": "Chaos Ultraman Spawn Egg",
 
   "block.ultracraft.camearra_boss_block": "Camearra Boss Block",
+  "block.ultracraft.chaos_ultraman_boss_block": "Chaos Ultraman Boss Block",
 
   //Ultraman
   "tab.ultracraft.ultraman": "Showa Ultraman",
@@ -237,9 +242,13 @@
   //Ultraman Cosmos
   "tab.ultracraft.cosmos": "Ultraman Cosmos",
 
+  "item.ultracraft.chaos_header_particles": "Chaos Header Particles",
+
   "item.ultracraft.cosmo_pluck": "Cosmo Pluck",
   "item.ultracraft.just_lancer": "Just Lancer",
   "item.ultracraft.color_timer_legend": "Color Timer",
+  "item.ultracraft.color_timer_chaos": "Color Timer",
+
   "item.ultracraft.cosmos_luna_energy": "Ultraman Cosmos Energy",
   "item.ultracraft.cosmos_corona_energy": "Ultraman Cosmos (Corona Mode) Energy",
   "item.ultracraft.cosmos_eclipse_energy": "Ultraman Cosmos (Eclipse Mode) Energy",
@@ -260,6 +269,9 @@
   "ultracraft:justice_crusher_energy.form": "Ultra: Ultraman Justce §cCrusher Mode",
 
   "ultracraft:legend_energy.form": "Ultra: Ultraman Legend",
+
+  "ultracraft:chaos_ultraman_energy.form": "Copy Ultra: Chaos Ultraman",
+  "ultracraft:chaos_ultraman_calamity_energy.form": "Copy Ultra: Chaos Ultraman (Calamity Form)",
 
   //Ultraman Nexus & The Next
   "tab.ultracraft.nexus": "Ultraman Nexus & The Next",

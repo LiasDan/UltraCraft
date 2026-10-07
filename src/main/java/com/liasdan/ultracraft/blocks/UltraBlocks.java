@@ -45,6 +45,9 @@ public class UltraBlocks {
 			() -> new OceanAltar(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.COW_BELL)
 					.strength(5.0F,6.0F),Block.box(3.5,0,3.5, 12.5,7,12.5)).AddToTabList(UltraTabs.BLOCKS));
 
+	public static final DeferredBlock<Block> CHAOS_ULTRAMAN_BOSS_BLOCK = registerBlock("chaos_ultraman_boss_block",
+			() -> new BossBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(2f), MobsCore.CHAOS_ULTRAMAN).AddToTabList(UltraTabs.BLOCKS));
+
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
 		DeferredBlock<T> toReturn = BLOCKS.register(name, block);
 		registerBlockItem(name, toReturn);

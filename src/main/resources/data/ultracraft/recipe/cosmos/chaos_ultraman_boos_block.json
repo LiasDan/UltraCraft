@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cosmos",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:chaos_header_particles"
+    },
+	"b": {
+      "item": "ultracraft:cosmos_corona_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:chaos_ultraman_boss_block"
+  }
+}
