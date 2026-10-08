@@ -5,6 +5,7 @@ import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.blocks.entity.ModBlockEntities;
 import com.liasdan.ultracraft.client.renderer.entity.BasicEntityRenderer;
 import com.liasdan.ultracraft.client.renderer.entity.IblisRenderer;
+import com.liasdan.ultracraft.client.renderer.entity.InpelaizerRenderer;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.entity.footsoldier.BaseFootsoldierEntity;
@@ -14,6 +15,7 @@ import com.liasdan.ultracraft.items.*;
 import com.liasdan.ultracraft.items.heisei.*;
 import com.liasdan.ultracraft.items.others.*;
 import com.liasdan.ultracraft.items.showa.ShowaUltramanItems;
+import com.liasdan.ultracraft.level.ModGameRules;
 import com.liasdan.ultracraft.world.attribute.UCAttributes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
@@ -101,6 +103,7 @@ public class UltraCraftCore {
 
 		UltraBlocks.register(modEventBus);
 		ModBlockEntities.register(modEventBus);
+		ModGameRules.register(modEventBus);
 
 		MobsCore.register(modEventBus);
 		MobsCore.MOBLIST.register(modEventBus);
@@ -188,7 +191,7 @@ public class UltraCraftCore {
 	}
 
 	// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-	@EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	@EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
 	public static class ClientModEvents {
 
 		@SubscribeEvent
@@ -208,6 +211,10 @@ public class UltraCraftCore {
 			event.registerEntityRenderer(MobsCore.CHAOS_ULTRAMAN.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.DARK_ZAGI.get(), BasicEntityRenderer::new);
+
+			event.registerEntityRenderer(MobsCore.INPELAIZER.get(), InpelaizerRenderer::new);
+			event.registerEntityRenderer(MobsCore.ALIEN_EMPERA.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.TSURUGI.get(), BasicEntityRenderer::new);
 		}
 	}
 }

@@ -13,7 +13,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-@EventBusSubscriber(modid = UltraCraftCore.MODID, bus =  EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = UltraCraftCore.MODID)
 
 public class UCAttributes extends Event implements IModBusEvent {
     public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, UltraCraftCore.MODID);

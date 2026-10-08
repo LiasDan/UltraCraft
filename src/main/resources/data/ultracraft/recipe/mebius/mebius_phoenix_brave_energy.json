@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mebius",
+  "ingredients": [
+    {
+      "item": "ultracraft:guys_energy"
+    },
+    {
+      "item": "ultracraft:hikari_energy"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:mebius_phoenix_brave_energy"
+  }
+}

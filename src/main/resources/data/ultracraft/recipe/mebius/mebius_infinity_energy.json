@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mebius",
+  "pattern": [
+    "uzs",
+    " m ",
+	"ajt"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:ace_energy"
+    },
+	"j": {
+      "item": "ultracraft:jack_energy"
+    },
+    "m": {
+      "item": "ultracraft:mebius_energy"
+    },
+    "s": {
+      "item": "ultracraft:seven_energy"
+    },
+    "t": {
+      "item": "ultracraft:taro_energy"
+    },
+    "u": {
+      "item": "ultracraft:ultraman_energy"
+    },
+    "z": {
+      "item": "ultracraft:zoffy_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:mebius_infinity_energy"
+  }
+}

@@ -1,11 +1,10 @@
 package com.liasdan.ultracraft.events;
 
 import com.liasdan.ultracraft.client.models.entity.IblisModel;
+import com.liasdan.ultracraft.client.models.entity.InpelaizerModel;
 import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
-import com.liasdan.ultracraft.entity.boss.CamearraEntity;
-import com.liasdan.ultracraft.entity.boss.ChaosUltramanEntity;
-import com.liasdan.ultracraft.entity.boss.DarkTigaEntity;
+import com.liasdan.ultracraft.entity.boss.*;
 import com.liasdan.ultracraft.entity.footsoldier.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -107,6 +106,7 @@ public class ModCommonEvents {
 	@SubscribeEvent
 	public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(IblisModel.LAYER_LOCATION, IblisModel::createBodyLayer);
+		event.registerLayerDefinition(InpelaizerModel.LAYER_LOCATION, InpelaizerModel::createBodyLayer);
 	}
 
 	@SubscribeEvent
@@ -123,6 +123,9 @@ public class ModCommonEvents {
 		event.put(MobsCore.IBLIS.get(), IblisEntity.setAttributes().build());
 		event.put(MobsCore.CHAOS_ULTRAMAN.get(), ChaosUltramanEntity.setAttributes().build());
 		event.put(MobsCore.DARK_ZAGI.get(), DarkZagiEntity.setAttributes().build());
+		event.put(MobsCore.INPELAIZER.get(), InpelaizerEntity.setAttributes().build());
+		event.put(MobsCore.ALIEN_EMPERA.get(), AlienEmperaEntity.setAttributes().build());
+		event.put(MobsCore.TSURUGI.get(), TsurugiEntity.setAttributes().build());
 	}
 
 	@SubscribeEvent

@@ -139,6 +139,9 @@ public class UltraTabs {
 			event.accept(MobsCore.IBLIS_SPAWN_EGG);
 			event.accept(MobsCore.CHAOS_ULTRAMAN_SPAWN_EGG);
 			event.accept(MobsCore.DARK_ZAGI_SPAWN_EGG);
+			event.accept(MobsCore.INPELAIZER_SPAWN_EGG);
+			event.accept(MobsCore.ALIEN_EMPERA_SPAWN_EGG);
+			event.accept(MobsCore.TSURUGI_SPAWN_EGG);
 			
 			for (int i = 0; i < UltraTabs.MISC.size(); i++)
 			{

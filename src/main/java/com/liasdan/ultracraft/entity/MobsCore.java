@@ -89,6 +89,24 @@ public class MobsCore {
 	public static final DeferredItem<DeferredSpawnEggItem> DARK_ZAGI_SPAWN_EGG = ITEMS.register("dark_zagi_spawn_egg",
 			() -> new DeferredSpawnEggItem(DARK_ZAGI,0x141414, 0x9e0000, new Item.Properties()));
 
+	public static final DeferredHolder<EntityType<?>, EntityType<InpelaizerEntity>> INPELAIZER = MOBLIST.register("inpelaizer",
+			() -> EntityType.Builder.of(InpelaizerEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":inpelaizer"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> INPELAIZER_SPAWN_EGG = ITEMS.register("inpelaizer_spawn_egg",
+			() -> new DeferredSpawnEggItem(INPELAIZER,0x5e6266, 0xd02020, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<AlienEmperaEntity>> ALIEN_EMPERA = MOBLIST.register("alien_empera",
+			() -> EntityType.Builder.of(AlienEmperaEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":alien_empera"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> ALIEN_EMPERA_SPAWN_EGG = ITEMS.register("alien_empera_spawn_egg",
+			() -> new DeferredSpawnEggItem(ALIEN_EMPERA,0x0d0d11, 0x5a1827, new Item.Properties()));
+
+	public static final DeferredHolder<EntityType<?>, EntityType<TsurugiEntity>> TSURUGI = MOBLIST.register("tsurugi",
+			() -> EntityType.Builder.of(TsurugiEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build(UltraCraftCore.MODID + ":tsurugi"));
+
+	public static final DeferredItem<DeferredSpawnEggItem> TSURUGI_SPAWN_EGG = ITEMS.register("tsurugi_spawn_egg",
+			() -> new DeferredSpawnEggItem(TSURUGI,0x1c2e60, 0x8c9aa9, new Item.Properties()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
