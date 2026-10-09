@@ -40,6 +40,9 @@
   "entity.ultracraft.iblis": "Chaos Header Iblis",
   "entity.ultracraft.chaos_ultraman": "Chaos Ultraman",
   "entity.ultracraft.dark_zagi": "Dark Zagi",
+  "entity.ultracraft.inpelaizer": "Inpelaizer",
+  "entity.ultracraft.alien_empera": "Alien Empera",
+  "entity.ultracraft.tsurugi": "Hunter Knight Tsurugi",
 
   "item.ultracraft.zetton_spawn_egg": "Zetton Spawn Egg",
   "item.ultracraft.yapool_spawn_egg": "Yapool Spawn Egg",
@@ -53,6 +56,9 @@
   "item.ultracraft.iblis_spawn_egg": "Chaos Header Iblis Spawn Egg",
   "item.ultracraft.chaos_ultraman_spawn_egg": "Chaos Ultraman Spawn Egg",
   "item.ultracraft.dark_zagi_spawn_egg": "Dark Zagi Spawn Egg",
+  "item.ultracraft.inpelaizer_spawn_egg": "Inpelaizer Spawn Egg",
+  "item.ultracraft.alien_empera_spawn_egg": "Alien Empera Spawn Egg",
+  "item.ultracraft.tsurugi_spawn_egg": "Hunter Knight Tsurugi Spawn Egg",
 
   "block.ultracraft.camearra_boss_block": "Camearra Boss Block",
   "block.ultracraft.chaos_ultraman_boss_block": "Chaos Ultraman Boss Block",
@@ -328,7 +334,7 @@
   "ultracraft:mebius_infinity_energy.form": "Ultra: Ultraman Mebius Infinity",
   "ultracraft:hikari_energy.form": "Ultra: Ultraman Hikari",
   "ultracraft:tsurugi_energy.form": "Villain: Hunter Knight Tsurugi",
-  "ultracraft:arb_gear.form": "Ultra: Ultraman Hikari (Armor of the Hero)",
+  "ultracraft:arb_gear_gem.form": "Ultra: Ultraman Hikari (Armor of the Hero)",
 
   //Other Ultras
   "item.ultracraft.nice_energy": "Nice Energy",

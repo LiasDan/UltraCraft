@@ -6,6 +6,10 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "ultracraft:guys_energy"
+        },
+        {
+          "type": "minecraft:item",
           "name": "ultracraft:land_of_light_fragment",
           "functions": [
             {
