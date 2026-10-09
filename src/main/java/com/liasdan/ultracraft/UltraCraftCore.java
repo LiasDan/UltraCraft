@@ -3,6 +3,7 @@ package com.liasdan.ultracraft;
 import com.liasdan.ultracraft.attachments.AttachmentTypes;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.blocks.entity.ModBlockEntities;
+import com.liasdan.ultracraft.client.renderer.entity.AlienEmperaRenderer;
 import com.liasdan.ultracraft.client.renderer.entity.BasicEntityRenderer;
 import com.liasdan.ultracraft.client.renderer.entity.IblisRenderer;
 import com.liasdan.ultracraft.client.renderer.entity.InpelaizerRenderer;
@@ -13,6 +14,7 @@ import com.liasdan.ultracraft.events.ModClientEvents;
 import com.liasdan.ultracraft.events.ModCommonEvents;
 import com.liasdan.ultracraft.items.*;
 import com.liasdan.ultracraft.items.heisei.*;
+import com.liasdan.ultracraft.items.new_gen.*;
 import com.liasdan.ultracraft.items.others.*;
 import com.liasdan.ultracraft.items.showa.ShowaUltramanItems;
 import com.liasdan.ultracraft.level.ModGameRules;
@@ -100,6 +102,8 @@ public class UltraCraftCore {
 		//ArcItems.register(modEventBus);
 		//OmegaItems.register(modEventBus);
 		//TeoItems.register(modEventBus);
+		//AnimeItems.register(modEventBus);
+		//MovieItems.register(modEventBus);
 
 		UltraBlocks.register(modEventBus);
 		ModBlockEntities.register(modEventBus);
@@ -213,7 +217,7 @@ public class UltraCraftCore {
 			event.registerEntityRenderer(MobsCore.DARK_ZAGI.get(), BasicEntityRenderer::new);
 
 			event.registerEntityRenderer(MobsCore.INPELAIZER.get(), InpelaizerRenderer::new);
-			event.registerEntityRenderer(MobsCore.ALIEN_EMPERA.get(), BasicEntityRenderer::new);
+			event.registerEntityRenderer(MobsCore.ALIEN_EMPERA.get(), AlienEmperaRenderer::new);
 			event.registerEntityRenderer(MobsCore.TSURUGI.get(), BasicEntityRenderer::new);
 		}
 	}

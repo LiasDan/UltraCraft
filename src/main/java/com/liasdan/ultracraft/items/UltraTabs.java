@@ -61,9 +61,13 @@ public class UltraTabs {
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.LAND_OF_LIGHT_FRAGMENT.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
 					.title(Component.translatable("tab.ultracraft.misc")).build());
     
-    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("ssc901", () ->
+    public static DeferredHolder<CreativeModeTab, CreativeModeTab> BlockTab = CREATIVE_MODE_TABS.register("umc901", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(UltraBlocks.METEOR.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
 					.title(Component.translatable("tab.ultracraft.block")).build());
+
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> EggsTab = CREATIVE_MODE_TABS.register("umc902", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(MobsCore.ZETTON_SPAWN_EGG.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
+					.title(Component.translatable("tab.ultracraft.egg")).build());
 
     public static List<Item> ULTRAMAN= new ArrayList<Item>();
 	public static List<Item> TDG= new ArrayList<Item>();
@@ -75,6 +79,7 @@ public class UltraTabs {
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
+	public static List<Item> EGGS= new ArrayList<Item>();
 
 	public static void register(IEventBus eventBus) {
 		CREATIVE_MODE_TABS.register(eventBus);
@@ -126,6 +131,19 @@ public class UltraTabs {
 			}
 		}
 		else if(event.getTab() == UltraTabs.MiscTab.get()) {
+			for (int i = 0; i < UltraTabs.MISC.size(); i++)
+			{
+				event.accept( UltraTabs.MISC.get(i));
+			}
+		}
+		else if(event.getTab() == UltraTabs.BlockTab.get()) {
+			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
+			{
+				event.accept( UltraTabs.BLOCKS.get(i));
+			}
+
+		}
+		else if(event.getTab() == UltraTabs.EggsTab.get()) {
 
 			event.accept(MobsCore.ZETTON_SPAWN_EGG);
 			event.accept(MobsCore.YAPOOL_SPAWN_EGG);
@@ -142,18 +160,11 @@ public class UltraTabs {
 			event.accept(MobsCore.INPELAIZER_SPAWN_EGG);
 			event.accept(MobsCore.ALIEN_EMPERA_SPAWN_EGG);
 			event.accept(MobsCore.TSURUGI_SPAWN_EGG);
-			
-			for (int i = 0; i < UltraTabs.MISC.size(); i++)
-			{
-				event.accept( UltraTabs.MISC.get(i));
-			}
-		}
-		else if(event.getTab() == UltraTabs.BlockTab.get()) {
-			for (int i = 0; i < UltraTabs.BLOCKS.size(); i++)
-			{
-				event.accept( UltraTabs.BLOCKS.get(i));
-			}
 
+			for (int i = 0; i < UltraTabs.EGGS.size(); i++)
+			{
+				event.accept( UltraTabs.EGGS.get(i));
+			}
 		}
 
 
