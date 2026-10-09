@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "#ultracraft:boss_blocks",
+    "#ultracraft:machines",
     "ultracraft:meteor"
   ]
 }
