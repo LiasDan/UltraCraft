@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:black_sparklence"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.tiga_dark.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.tiga_dark.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/tiga/tiga",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:black_sparklence"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

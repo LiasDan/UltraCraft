@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:flash_prism"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.great.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.great.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:showa",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:flash_prism"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

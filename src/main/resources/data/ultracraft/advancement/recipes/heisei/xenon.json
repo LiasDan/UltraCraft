@@ -1,0 +1,25 @@
+{
+  "parent": "ultracraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "ultracraft:max/color_timer_xenon"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:xenon_energy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

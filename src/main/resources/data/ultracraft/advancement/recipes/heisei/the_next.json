@@ -1,0 +1,25 @@
+{
+  "parent": "ultracraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "ultracraft:nexus/energy_core"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:the_next_anphans_energy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

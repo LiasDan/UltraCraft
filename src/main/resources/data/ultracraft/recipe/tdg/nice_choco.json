@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "nice",
+  "ingredients": [
+    {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:nice_choco"
+  }
+}

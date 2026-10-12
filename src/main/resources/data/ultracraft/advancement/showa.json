@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:beta_capsule"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.showa.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.showa.desc"
+    },
+    "background": "minecraft:textures/block/deepslate.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

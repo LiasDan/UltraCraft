@@ -1,0 +1,25 @@
+{
+  "parent": "ultracraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "ultracraft:nexus/evoltruster"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:nexus_anphans_energy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

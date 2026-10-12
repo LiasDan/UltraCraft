@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:the_next_junis_energy"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.the_next_junis.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.the_next_junis.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/nexus/the_next",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:energy_core"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"ultracraft:the_next_junis_energy\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

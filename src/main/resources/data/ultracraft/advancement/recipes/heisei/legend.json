@@ -1,0 +1,36 @@
+{
+  "parent": "ultracraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "ultracraft:cosmos/color_timer_legend"
+    ]
+  },
+  "criteria": {
+    "has_item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:cosmos_eclipse_energy"
+          }
+        ]
+      }
+    },
+    "has_item2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:justice_energy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item1",
+      "has_item2"
+    ]
+  ]
+}

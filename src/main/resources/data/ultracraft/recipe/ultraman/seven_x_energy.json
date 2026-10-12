@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "seven",
+  "ingredients": [
+    {
+      "item": "ultracraft:seven_energy"
+    },
+    {
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "result": {
+    "id": "ultracraft:seven_x_energy"
+  }
+}

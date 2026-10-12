@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:arb_gear_gem"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.tsurugi.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.tsurugi.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/mebius/hikari",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:knight_brace"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"ultracraft:arb_gear_gem\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:cosmos_eclipse_energy"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.cosmos_eclipse.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.cosmos_eclipse.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/cosmos/cosmos",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:cosmo_pluck"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"ultracraft:cosmos_eclipse_energy\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

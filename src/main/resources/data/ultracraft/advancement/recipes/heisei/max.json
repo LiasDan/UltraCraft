@@ -1,0 +1,25 @@
+{
+  "parent": "ultracraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "ultracraft:max/max_spark"
+    ]
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ultracraft:max_energy"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

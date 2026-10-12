@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:beta_capsule_zoffy"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.zoffy.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.zoffy.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:showa_ultraman/ultraman",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:beta_capsule_zoffy"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

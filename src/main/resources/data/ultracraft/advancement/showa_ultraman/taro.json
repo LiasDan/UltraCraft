@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:ultra_badge"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.taro.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.taro.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:showa",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:ultra_badge"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

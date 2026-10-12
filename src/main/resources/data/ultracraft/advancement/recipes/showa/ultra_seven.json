@@ -2,7 +2,9 @@
   "parent": "ultracraft:recipes/root",
   "rewards": {
     "recipes": [
-      "ultracraft:ultraman/ultra_eye"
+      "ultracraft:ultraman/ultra_eye",
+      "ultracraft:ultraman/eye_slugger",
+      "ultracraft:ultraman/seven_x_energy"
     ]
   },
   "criteria": {

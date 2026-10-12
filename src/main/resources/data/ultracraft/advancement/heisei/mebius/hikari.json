@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:knight_brace"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.hikari.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.hikari.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/mebius/mebius",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:knight_brace"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

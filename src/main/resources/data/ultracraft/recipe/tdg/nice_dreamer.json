@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nice",
+  "pattern": [
+    "aaa",
+    "aba",
+	"aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "ultracraft:land_of_light_fragment"
+    },
+	"b": {
+      "item": "ultracraft:nice_energy"
+    }
+  },
+  "result": {
+    "id": "ultracraft:nice_dreamer"
+  }
+}

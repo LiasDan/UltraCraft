@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
@@ -160,6 +161,8 @@ public class OtherItems {
 				}
 			}.addAlternative(MANTLE_BROOCH_ZOFFY.get()).AddToTabList(UltraTabs.MISC));
 
+	public static final DeferredItem<Item> NICE_CHOCO = ITEMS.register("nice_choco",
+			() -> new BaseItem(new Item.Properties().food(Foods.COOKIE)).AddToTabList(UltraTabs.MISC));
 	public static final DeferredItem<Item> NICE_ENERGY = ITEMS.register("nice_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","nice","",
 					new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
@@ -167,7 +170,6 @@ public class OtherItems {
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.TDG));
-
 	public static final DeferredItem<Item> NICE_DREAMER = ITEMS.register("nice_dreamer",
 			() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"nice",NICE_ENERGY,ULTRAMAN_HELMET,ULTRAMAN_CHESTPLATE,ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
 

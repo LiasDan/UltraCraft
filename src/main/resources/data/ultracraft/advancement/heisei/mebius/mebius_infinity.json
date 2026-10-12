@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:mebius_infinity_energy"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.mebius_infinity.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.mebius_infinity.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "ultracraft:heisei/mebius/mebius_phoenix_brave",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "ultracraft:ultraman_head"
+              ]
+            },
+            "chest": {
+              "items": [
+                "ultracraft:ultraman_torso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "ultracraft:ultraman_legs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "ultracraft:mebius_brace"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{slot_tex1:\"ultracraft:mebius_infinity_energy\"}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

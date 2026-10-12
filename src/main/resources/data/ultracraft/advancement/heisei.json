@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "ultracraft:tiga_sparklence"
+    },
+    "title": {
+      "translate": "advancements.ultracraft.heisei.title"
+    },
+    "description": {
+      "translate": "advancements.ultracraft.heisei.desc"
+    },
+    "background": "minecraft:textures/block/cobbled_deepslate.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
