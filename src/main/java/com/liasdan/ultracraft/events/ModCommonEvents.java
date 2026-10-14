@@ -6,6 +6,7 @@ import com.liasdan.ultracraft.effect.EffectCore;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.entity.boss.*;
 import com.liasdan.ultracraft.entity.footsoldier.*;
+import com.liasdan.ultracraft.items.OtherItems;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
@@ -29,6 +30,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
 import java.util.List;
 import java.util.Objects;
@@ -97,6 +99,13 @@ public class ModCommonEvents {
 	}
 
 	public static class CommonEvents {
+		@SubscribeEvent
+		public void addCustomWandererTrades(WandererTradesEvent event) {
+			List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
+			trades.add((trader,rand) -> new MerchantOffer(
+					new ItemCost(Items.EMERALD, 5),
+					new ItemStack(OtherItems.MANTLE_BROOCH.get(), 1), 10, 20, 0.02F));
+		}
 
 		@SubscribeEvent
 		public void addCustomTrades(VillagerTradesEvent event) {
