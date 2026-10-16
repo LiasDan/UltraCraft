@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#ultracraft:boss_blocks"
+    "ultracraft:camearra_boss_block",
+    "ultracraft:chaos_ultraman_boss_block"
   ]
 }

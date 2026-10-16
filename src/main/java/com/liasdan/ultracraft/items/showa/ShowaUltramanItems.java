@@ -77,7 +77,14 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			{
+				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
+					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
+						if (((rider.tickCount / 15) & 1) == 0) layerInfo.add(new RenderLayerInfo("ultra_seven_x_dark_beam_lamp","seven"));
+					}
+				}
+			}.ChangeModel("geo/seven.geo.json").AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> JACK_ENERGY = ITEMS.register("jack_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","jack","",
