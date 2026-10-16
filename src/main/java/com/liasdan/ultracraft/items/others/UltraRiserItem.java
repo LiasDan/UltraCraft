@@ -61,6 +61,7 @@ public class UltraRiserItem extends UltraArmorItem {
 	}
 
 	public boolean isTransformed(LivingEntity player) {
+		if (!(player.getItemBySlot(EquipmentSlot.FEET).getItem()instanceof UltraRiserItem))return false;
 		return player.getItemBySlot(EquipmentSlot.HEAD).getItem()==HEAD.asItem()
 				&&player.getItemBySlot(EquipmentSlot.CHEST).getItem()==TORSO.asItem()
 				&&player.getItemBySlot(EquipmentSlot.LEGS).getItem()==LEGS.asItem()
@@ -318,6 +319,8 @@ public class UltraRiserItem extends UltraArmorItem {
 	}
 
 	public static UltraFormChangeItem get_Form_Item(ItemStack itemstack, int SLOT) {
+
+		if (!(itemstack.getItem() instanceof UltraRiserItem)) return null;
 
 		UltraRiserItem belt = (UltraRiserItem) itemstack.getItem();
 		UltraFormChangeItem Base_Form_Item = (SLOT>=2 ? belt.Extra_Base_Form_Item.get(SLOT-2) : belt.Base_Form_Item);
