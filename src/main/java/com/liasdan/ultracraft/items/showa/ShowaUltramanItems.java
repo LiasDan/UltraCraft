@@ -47,7 +47,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
@@ -63,7 +63,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
@@ -77,7 +77,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
@@ -92,7 +92,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD && rider.getHealth()<5) {
@@ -108,7 +108,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> FATHER_ENERGY = ITEMS.register("father_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","father_of_ultra","",
@@ -116,7 +116,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> TARO_ENERGY = ITEMS.register("taro_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","taro","",
@@ -124,7 +124,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> MOTHER_ENERGY = ITEMS.register("mother_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","mother_of_ultra","",
@@ -132,7 +132,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> LEO_MANTLE = ITEMS.register("leo_mantle",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","leo","",
@@ -140,7 +140,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			{
 				public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
 					if (slot == EquipmentSlot.HEAD)
@@ -153,7 +153,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 			.addSwitchForm(LEO_MANTLE.get()).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> ASTRA_ENERGY = ITEMS.register("astra_energy",
@@ -162,7 +162,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> KING_MANTLE = ITEMS.register("king_mantle",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"_mantle","king","king_buckle",
@@ -186,7 +186,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> ELEK_ENERGY = ITEMS.register("elek_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","elek","",
@@ -194,7 +194,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> LOTO_ENERGY = ITEMS.register("loto_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","loto","",
@@ -202,7 +202,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> EIGHTY_ENERGY = ITEMS.register("eighty_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","eighty","",
@@ -210,7 +210,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> YULLIAN_ENERGY = ITEMS.register("yullian_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","yullian","",
@@ -218,7 +218,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> SCOTT_ENERGY = ITEMS.register("scott_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","scott","",
@@ -226,7 +226,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> CHUCK_ENERGY = ITEMS.register("chuck_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","chuck","",
@@ -234,7 +234,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> BETH_ENERGY = ITEMS.register("beth_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","beth","",
@@ -242,7 +242,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> GREAT_ENERGY = ITEMS.register("great_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","great","",
@@ -250,7 +250,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> POWERED_ENERGY = ITEMS.register("powered_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","powered","",
@@ -258,7 +258,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
 	public static final DeferredItem<Item> ZEARTH_ENERGY = ITEMS.register("zearth_energy",
 			() -> new UltraFormChangeItem(new Item.Properties(),0,"","zearth","",
@@ -266,7 +266,7 @@ public class ShowaUltramanItems {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.ULTRAMAN));
 
     public static final DeferredItem<Item> BETA_CAPSULE = ITEMS.register("beta_capsule",
     		() -> new UltraRiserItem(ArmorMaterials.DIAMOND,"ultraman",ULTRAMAN_ENERGY,OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.ULTRAMAN).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));

@@ -26,26 +26,26 @@ public class DynaItems {
     public static final DeferredItem<Item> DYNA_FLASH_TYPE_ENERGY = ITEMS.register("dyna_flash_type_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_flash_type","dyna","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
 
     public static final DeferredItem<Item> DYNA_STRONG_TYPE_ENERGY = ITEMS.register("dyna_strong_type_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_strong_type","dyna","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
 
     public static final DeferredItem<Item> DYNA_MIRACLE_TYPE_ENERGY = ITEMS.register("dyna_miracle_type_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_miracle_type","dyna","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false)).AddToList(CosmicRefiner.COSMIC_REFINER, 10).AddToTabList(UltraTabs.TDG));
 
     public static final DeferredItem<Item> LIEFLASHER = ITEMS.register("lieflasher",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"dyna",DYNA_FLASH_TYPE_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.TDG).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
