@@ -21,18 +21,18 @@ public class NeosItems {
     public static final DeferredItem<Item> NEOS_ENERGY = ITEMS.register("neos_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","neos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.NEOS));
 
     public static final DeferredItem<Item> ULTRASEVEN_21_ENERGY = ITEMS.register("ultraseven_21_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","ultraseven_21","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(UltraTabs.NEOS));
 
     public static final DeferredItem<Item> ESTRELLAR = ITEMS.register("estrellar",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"neos",NEOS_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.NEOS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
