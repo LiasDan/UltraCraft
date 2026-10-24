@@ -33,31 +33,35 @@ public class CosmosItems {
     public static final DeferredItem<Item> COSMOS_LUNA_ENERGY = ITEMS.register("cosmos_luna_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_luna","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40,1,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2, true, false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_CORONA_ENERGY = ITEMS.register("cosmos_corona_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_corona","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_ECLIPSE_ENERGY = ITEMS.register("cosmos_eclipse_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_eclipse","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,3,true,false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_MIRACLUNA_ENERGY = ITEMS.register("cosmos_miracluna_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_luna","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,2,true,false))
             {
                 public void SetUnlimitedModels(List<RenderLayerInfo> layerInfo, ItemStack itemStack, LivingEntity rider, EquipmentSlot slot) {
                     RenderType glitter = RenderType.breezeEyes(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/armor/glitter.png"));
@@ -69,54 +73,61 @@ public class CosmosItems {
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_space_corona","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-                    new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+                    new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,3,true,false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> COSMOS_FUTURE_ENERGY = ITEMS.register("cosmos_future_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_future","cosmos","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-                    new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+                    new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,2,true,false)).AddToTabList(UltraTabs.COSMOS));
 
     public static final DeferredItem<Item> JUSTICE_ENERGY = ITEMS.register("justice_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","justice","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false)).AddToTabList(UltraTabs.COSMOS));
     public static final DeferredItem<Item> JUSTICE_CRUSHER_ENERGY = ITEMS.register("justice_crusher_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_crusher","justice","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.COSMOS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,3,true,false)).AddToTabList(UltraTabs.COSMOS));
 
     public static final DeferredItem<Item> LEGEND_ENERGY = ITEMS.register("legend_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","legend","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 6,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,3,true,false)));
 
     public static final DeferredItem<Item> CHAOS_ULTRAMAN_ENERGY = ITEMS.register("chaos_ultraman_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","chaos_ultraman","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40,1,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).addAlternative(COSMOS_LUNA_ENERGY.get()));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2, true, false)).addAlternative(COSMOS_LUNA_ENERGY.get()));
     public static final DeferredItem<Item> CHAOS_ULTRAMAN_CALAMITY_ENERGY = ITEMS.register("chaos_ultraman_calamity_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_calamity","chaos_ultraman","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).addAlternative(COSMOS_CORONA_ENERGY.get()));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false)).addAlternative(COSMOS_CORONA_ENERGY.get()));
 
     public static final DeferredItem<Item> COSMO_PLUCK = ITEMS.register("cosmo_pluck",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"cosmos",COSMOS_LUNA_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.COSMOS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));

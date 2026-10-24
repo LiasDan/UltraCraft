@@ -21,47 +21,58 @@ public class NexusItems {
     public static final DeferredItem<Item> NEXUS_ANPHANS_ENERGY = ITEMS.register("nexus_anphans_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_anphans","nexus","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false)).AddToTabList(UltraTabs.NEXUS));
     public static final DeferredItem<Item> NEXUS_JUNIS_ENERGY = ITEMS.register("nexus_junis_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_junis","nexus","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false),
+                    new MobEffectInstance(EffectCore.SLASH,40,0,true,false)).AddToTabList(UltraTabs.NEXUS));
     public static final DeferredItem<Item> NEXUS_JUNIS_BLUE_ENERGY = ITEMS.register("nexus_junis_blue_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_junis_blue","nexus","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,2,true,false),
+                    new MobEffectInstance(EffectCore.SLASH,40,0,true,false),
+                    new MobEffectInstance(EffectCore.SHOTBOOST,40,0,true,false)).AddToTabList(UltraTabs.NEXUS));
 
     public static final DeferredItem<Item> NOA_ENERGY = ITEMS.register("noa_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"","noa","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,4,true,false),
+                    new MobEffectInstance(EffectCore.SLASH,40,1,true,false),
+                    new MobEffectInstance(EffectCore.SHOTBOOST,40,1,true,false)).AddToTabList(UltraTabs.NEXUS));
 
     public static final DeferredItem<Item> THE_NEXT_ANPHANS_ENERGY = ITEMS.register("the_next_anphans_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_anphans","the_next","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,0,true,false)).AddToTabList(UltraTabs.NEXUS));
     public static final DeferredItem<Item> THE_NEXT_JUNIS_ENERGY = ITEMS.register("the_next_junis_energy",
             () -> new UltraFormChangeItem(new Item.Properties(),0,"_junis","the_next","",
                     new MobEffectInstance(EffectCore.FLYING, 40, 0,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
                     new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
-                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(UltraTabs.NEXUS));
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40,1,true,false)).AddToTabList(UltraTabs.NEXUS));
 
     public static final DeferredItem<Item> EVOLTRUSTER = ITEMS.register("evoltruster",
             () -> new UltraRiserItem(ArmorMaterials.DIAMOND,"nexus",NEXUS_ANPHANS_ENERGY, OtherItems.ULTRAMAN_HELMET,OtherItems.ULTRAMAN_CHESTPLATE,OtherItems.ULTRAMAN_LEGGINGS,new Item.Properties()).AddToTabList(UltraTabs.NEXUS).ChangeRepairItem(OtherItems.LAND_OF_LIGHT_FRAGMENT.get()));
