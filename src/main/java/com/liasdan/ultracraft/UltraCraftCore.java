@@ -88,7 +88,7 @@ public class UltraCraftCore {
 		NexusItems.register(modEventBus);
 		MaxItems.register(modEventBus);
 		MebiusItems.register(modEventBus);
-		//ZeroItems.register(modEventBus);
+		ZeroItems.register(modEventBus);
 		//GingaItems.register(modEventBus);
 		//XItems.register(modEventBus);
 		//OrbItems.register(modEventBus);

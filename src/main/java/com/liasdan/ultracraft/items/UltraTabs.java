@@ -4,7 +4,8 @@ import com.liasdan.ultracraft.UltraCraftCore;
 import com.liasdan.ultracraft.blocks.UltraBlocks;
 import com.liasdan.ultracraft.entity.MobsCore;
 import com.liasdan.ultracraft.items.heisei.*;
-import com.liasdan.ultracraft.items.showa.ShowaUltramanItems;
+import com.liasdan.ultracraft.items.showa.*;
+import com.liasdan.ultracraft.items.new_gen.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -57,6 +58,10 @@ public class UltraTabs {
 			CreativeModeTab.builder().icon(() -> new ItemStack(MebiusItems.MEBIUS_BRACE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_mebius_items.png"))
 					.title(Component.translatable("tab.ultracraft.mebius")).build());
 
+	public static DeferredHolder<CreativeModeTab, CreativeModeTab> ZeroTab = CREATIVE_MODE_TABS.register("umc008", () ->
+			CreativeModeTab.builder().icon(() -> new ItemStack(ZeroItems.ULTRA_ZERO_EYE.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_zero_items.png"))
+					.title(Component.translatable("tab.ultracraft.zero")).build());
+
 	public static DeferredHolder<CreativeModeTab, CreativeModeTab> MiscTab = CREATIVE_MODE_TABS.register("umc900", () ->
     		CreativeModeTab.builder().icon(() -> new ItemStack(OtherItems.LAND_OF_LIGHT_FRAGMENT.get())).backgroundTexture(ResourceLocation.fromNamespaceAndPath(UltraCraftCore.MODID,"textures/gui/tab_ultra_items.png"))
 					.title(Component.translatable("tab.ultracraft.misc")).build());
@@ -76,6 +81,7 @@ public class UltraTabs {
 	public static List<Item> NEXUS= new ArrayList<Item>();
 	public static List<Item> MAX= new ArrayList<Item>();
 	public static List<Item> MEBIUS= new ArrayList<Item>();
+	public static List<Item> ZERO= new ArrayList<Item>();
     
     public static List<Item> MISC= new ArrayList<Item>();
     public static List<Block> BLOCKS= new ArrayList<Block>();
@@ -128,6 +134,12 @@ public class UltraTabs {
 			for (int i = 0; i < UltraTabs.MEBIUS.size(); i++)
 			{
 				event.accept( UltraTabs.MEBIUS.get(i));
+			}
+		}
+		else if(event.getTab() == UltraTabs.ZeroTab.get()) {
+			for (int i = 0; i < UltraTabs.ZERO.size(); i++)
+			{
+				event.accept( UltraTabs.ZERO.get(i));
 			}
 		}
 		else if(event.getTab() == UltraTabs.MiscTab.get()) {
