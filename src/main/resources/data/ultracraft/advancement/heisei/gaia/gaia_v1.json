@@ -38,7 +38,8 @@
             },
             "feet": {
               "items": [
-                "ultracraft:photoelectron_tube"
+                "ultracraft:photoelectron_tube",
+                "ultracraft:esplender"
               ]
             }
           }

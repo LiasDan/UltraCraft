@@ -77,9 +77,11 @@ public class UltraRiserItem extends UltraArmorItem {
 	public static double getRenderType(ItemStack stack) {
 		double form_double = 1;
 		UltraFormChangeItem form = get_Form_Item(stack, 1);
-		if (form.get_Show_Face())form_double=2;
-		if (form.get_Show_under())form_double=3;
-		return form_double ;
+		if (form == null) return 0;
+
+		if (form.get_Show_Face()) form_double = 2;
+		if (form.get_Show_under()) form_double = 3;
+		return form_double;
 	}
 
 	@Override
@@ -320,16 +322,24 @@ public class UltraRiserItem extends UltraArmorItem {
 
 	public static UltraFormChangeItem get_Form_Item(ItemStack itemstack, int SLOT) {
 
-		if (!(itemstack.getItem() instanceof UltraRiserItem)) return null;
+		if (itemstack == null || itemstack.isEmpty() || !(itemstack.getItem() instanceof UltraRiserItem)) {
+			return null;
+		}
 
 		UltraRiserItem belt = (UltraRiserItem) itemstack.getItem();
-		UltraFormChangeItem Base_Form_Item = (SLOT>=2 ? belt.Extra_Base_Form_Item.get(SLOT-2) : belt.Base_Form_Item);
+		UltraFormChangeItem Base_Form_Item = (SLOT >= 2 && belt.Extra_Base_Form_Item != null && (SLOT - 2) < belt.Extra_Base_Form_Item.size())
+				? belt.Extra_Base_Form_Item.get(SLOT - 2)
+				: belt.Base_Form_Item;
 
 		if (itemstack.has(DataComponents.CUSTOM_DATA)) {
 			CompoundTag tag = itemstack.get(DataComponents.CUSTOM_DATA).getUnsafe();
-			ResourceLocation Used_Form_Item = ResourceLocation.parse(tag.getString("slot_tex" + SLOT));
-			if (BuiltInRegistries.ITEM.get(Used_Form_Item) instanceof UltraFormChangeItem formItem) {
-				return formItem;
+			String slotKey = "slot_tex" + SLOT;
+
+			if (tag.contains(slotKey)) {
+				ResourceLocation Used_Form_Item = ResourceLocation.parse(tag.getString(slotKey));
+				if (BuiltInRegistries.ITEM.get(Used_Form_Item) instanceof UltraFormChangeItem formItem) {
+					return formItem;
+				}
 			}
 		}
 		return Base_Form_Item;
@@ -347,7 +357,9 @@ public class UltraRiserItem extends UltraArmorItem {
 			if (Show_belt_form_info) {
 				{
 					Item formItem = this.get_Form_Item(stack, 1);
-					tooltipComponents.add(Component.translatable(formItem.toString() + ".form"));
+					if (formItem != null) {
+						tooltipComponents.add(Component.translatable(formItem.toString() + ".form"));
+					}
 				}
 			}
 		}

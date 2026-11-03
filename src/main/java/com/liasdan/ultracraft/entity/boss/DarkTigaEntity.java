@@ -89,34 +89,33 @@ public class DarkTigaEntity  extends BaseFootsoldierEntity {
     public void remove(RemovalReason reason) {
         if (isDeadOrDying()) {
             ItemStack riser = getItemBySlot(EquipmentSlot.FEET);
-            if (!level().isClientSide() && UltraRiserItem.get_Form_Item(riser, 1) ==  TigaItems.TIGA_DARK_TORNADO_ENERGY.get()) {
-                Random rand = new Random();
-                int randomInt = rand.nextInt(2);
+            if (!riser.isEmpty() && riser.getItem() instanceof UltraRiserItem) {
+                if (!level().isClientSide() && UltraRiserItem.get_Form_Item(riser, 1) == TigaItems.TIGA_DARK_TORNADO_ENERGY.get()) {
+                    Random rand = new Random();
+                    int randomInt = rand.nextInt(2);
 
-                if (randomInt == 0) {
-                    ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_POWER_TYPE_ENERGY.get(),1), 0, 0, 0);
-                    energy.setPickUpDelay(0);
-                    level().addFreshEntity(energy);
-                }
-                else if (randomInt == 1) {
-                    ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_DARK_TORNADO_ENERGY.get(),1), 0, 0, 0);
-                    energy.setPickUpDelay(0);
-                    level().addFreshEntity(energy);
-                }
-            }
-            else if (!level().isClientSide() && UltraRiserItem.get_Form_Item(riser, 1) ==  TigaItems.TIGA_DARK_BLAST_ENERGY.get()) {
-                Random rand = new Random();
-                int randomInt = rand.nextInt(2);
+                    if (randomInt == 0) {
+                        ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_POWER_TYPE_ENERGY.get(), 1), 0, 0, 0);
+                        energy.setPickUpDelay(0);
+                        level().addFreshEntity(energy);
+                    } else if (randomInt == 1) {
+                        ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_DARK_TORNADO_ENERGY.get(), 1), 0, 0, 0);
+                        energy.setPickUpDelay(0);
+                        level().addFreshEntity(energy);
+                    }
+                } else if (!level().isClientSide() && UltraRiserItem.get_Form_Item(riser, 1) == TigaItems.TIGA_DARK_BLAST_ENERGY.get()) {
+                    Random rand = new Random();
+                    int randomInt = rand.nextInt(2);
 
-                if (randomInt == 0) {
-                    ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_SKY_TYPE_ENERGY.get(),1), 0, 0, 0);
-                    energy.setPickUpDelay(0);
-                    level().addFreshEntity(energy);
-                }
-                else if (randomInt == 1) {
-                    ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_DARK_BLAST_ENERGY.get(),1), 0, 0, 0);
-                    energy.setPickUpDelay(0);
-                    level().addFreshEntity(energy);
+                    if (randomInt == 0) {
+                        ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_SKY_TYPE_ENERGY.get(), 1), 0, 0, 0);
+                        energy.setPickUpDelay(0);
+                        level().addFreshEntity(energy);
+                    } else if (randomInt == 1) {
+                        ItemEntity energy = new ItemEntity(level(), getX(), getY(), getZ(), new ItemStack(TigaItems.TIGA_DARK_BLAST_ENERGY.get(), 1), 0, 0, 0);
+                        energy.setPickUpDelay(0);
+                        level().addFreshEntity(energy);
+                    }
                 }
             }
         }
