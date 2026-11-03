@@ -339,6 +339,22 @@
   "ultracraft:tsurugi_energy.form": "Villain: Hunter Knight Tsurugi",
   "ultracraft:arb_gear_gem.form": "Ultra: Ultraman Hikari (Armor of the Hero)",
 
+  //Zero
+  "tab.ultracraft.zero": "Ultraman Zero",
+
+  "item.ultracraft.ultra_zero_eye": "Ultra Zero Eye",
+  "item.ultracraft.zero_energy": "Ultraman Zero Energy",
+  "item.ultracraft.zero_strong_corona_energy": "Ultraman Zero Strong Corona Energy",
+  "item.ultracraft.zero_luna_miracle_energy": "Ultraman Zero Luna Miracle Energy",
+  "item.ultracraft.zero_wild_burst_energy": "Ultraman Zero Wild Burst Energy",
+
+  "item.ultracraft.zero_slugger": "Zero Slugger",
+
+  "ultracraft:zero_energy.form": "Ultra: Ultraman Zero",
+  "ultracraft:zero_strong_corona_energy.form": "Ultra: Ultraman Zero Strong Corona",
+  "ultracraft:zero_luna_miracle_energy.form": "Ultra: Ultrman Zero Luna Miracle",
+  "ultracraft:zero_wild_burst_energy.form": "Ultra: Ultraman Zero Wild Burst"
+
   //Other Ultras
   "item.ultracraft.nice_choco": "Nice Choco",
   "item.ultracraft.nice_energy": "Nice Energy",
